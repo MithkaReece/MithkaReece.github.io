@@ -1,7 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #18191a;
+    /*background-color: #18191a;*/
+    background-image: url('assets/background_mountains.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #dfe1e6;
   }
 
@@ -9,7 +13,7 @@ body {
     position: fixed;
     top: 6rem;
     left: 0;
-    width: 8rem;
+    width: 7.5rem;
     height: 100%;
     background-color: #18191a;
     overflow-y: auto;

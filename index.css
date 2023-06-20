@@ -1,23 +1,27 @@
 .sections-container {
-  margin-top: 60px;
+  display:flex;
+  flex-direction:column;
+  gap:6rem;
+  margin-top: 6rem;
   margin-left: 9rem;
-  background-color: #18191a;  
 }
 
 
 .project-section {
-  padding: 20px;
-  background-color: #282424;
+  padding: 1rem;
+  padding-top: 0rem;
+  background-color: #282424c0;
   border: 1px solid #282424;
   border-radius: 5px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 6rem;
 }
 
 .project-section h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .main-container {
