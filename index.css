@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/background_mountains.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #dfe1e6;
+}
+
+
 .sections-container {
   display:flex;
   flex-direction:column;
