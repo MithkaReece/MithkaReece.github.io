@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Today Sans Serif SH Medium", Arial, sans-serif;
 }
 
 .banner {
@@ -42,6 +43,16 @@ body {
   transition: transform 0.5s;
 }
 
+.image-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .image-card img {
   width: 30rem;
   height: 20rem;
@@ -78,4 +89,22 @@ body {
 .image-card:hover .overlay {
   opacity: 1;
 }
+
+.tags {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.tags div {
+  background-color: brown;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  margin: 0 0;
+  display: inline-block;
+  color: white;
+  font-size: 1rem;
+}
+
+
 
