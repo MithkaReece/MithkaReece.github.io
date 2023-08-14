@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Today Sans Serif SH Medium", Arial, sans-serif;
+  background-color: rgb(240, 23, 23);
+  color: white;
+}
+
+.main {
+  background-color: rgb(20, 20, 20);
+  margin-top: 7rem;
+  padding: 2rem 8rem;
+  flex: 1; /* Allow main content to take up remaining vertical space */
+  display: flex;
+  flex-direction: column; /* Set flex direction to column for vertical layout */
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content at the top */
+}
+
+
+.project-title {
+  font-size: 5rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.section1 {
+  display:flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-image {
+  width: auto;
+  height: 25rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.section2 {
+  display:flex;
+  gap: 2rem;
+}
+
+.project-video {
+  width: 100%;
+  margin-top: 0;
+}

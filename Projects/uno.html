@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <h2 class="navbar-header">Reece Waite</h2>
+        <ul class="navbar-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="main">
+        <h1 class="project-title">Uno</h1>
+        <section class="section1">
+          <img class="project-image" src="../Assets/Uno1.png"  alt="Project Image" >
+          <section>
+            <h3>Previous Development - Summer 2020</h3>
+            <p class="description">Development was over a week and due to covid I could spend all my time doing it. 
+              This was my first experience with anything multiplayer or any communication between servers. 
+              I decided to user sockets are they maintain connections with the player allowing faster and 
+              2 way communications. I wanted to simulate a real multiplayer game and avoid potentially cheating 
+              by simulating the logic rules on the server as well as making the client only allow valid moves. 
+              The clients only request to make a move and the server has to approve the move to send out the 
+              updated state of the game. I had little experience with visuals in the browser so I essentially 
+              manually set the locations and angles of the cards present as well as working out the angles that 
+              each other player would be sitting round the centre cards. If it was to remake this, I would 
+              definitely look for some library that would achieve this for me as well as allowing animations 
+              for card playing and effects. One feature which I did not manage to finish as it cause several 
+              bugs, was the uno button which announces when you will have one card. This was mostly due to my 
+              code not being very organised making it very hard to track origins of bugs however it was an good 
+              lesson in why organising code bases are very important even for small projects like this.</p>
+            <h3>Current Development - Summer 2023</h3>
+            <p class="description">Refactoring all of the backend.</p>
+          </section>
+        </section>
+
+        <h3 class="section-title">Video Title</h3>
+        <section class="section2">
+          <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
+          <p class="description">Section description here.</p>
+        </section>
+      </div>
+      </div>
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>
