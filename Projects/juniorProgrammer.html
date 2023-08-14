@@ -37,47 +37,86 @@
         </div>
 
 
-        <div class="game-container">
-          <h3>1.0 - Coop Car Race</h3>
+        <div class="game-container" data-src="../Games/Prototype1/index.html">
+          <h3>Prototype 1 - Coop Car Race</h3>
           <div class="button-container">
             <button class="load-button">Load/Reload Game</button>
             <button class="unload-button">Unload Game</button>
           </div>
-          <img class="placeholder-image" src="../Assets/CreateWithCode1.0.png" alt="Placeholder Image" width="1000" height="700">
+          <img class="placeholder-image" src="../Games/Prototype1/Preview.png" alt="Placeholder Image" width="1000" height="700">
           <iframe class="unity-game" width="1000" height="0" hidden></iframe>
         </div>
         
-        <div class="game-container">
-          <h3>1.0 - Coop Car Race</h3>
+        <div class="game-container" data-src="../Games/Challenge1/index.html">
+          <h3>Challenge 1 - Plane Flying</h3>
           <div class="button-container">
             <button class="load-button">Load/Reload Game</button>
             <button class="unload-button">Unload Game</button>
           </div>
-          <img class="placeholder-image" src="../Assets/CreateWithCode1.0.png" alt="Placeholder Image" width="1000" height="700">
+          <img class="placeholder-image" src="../Games/Challenge1/Preview.png" alt="Placeholder Image" width="1000" height="700">
           <iframe class="unity-game" width="1000" height="0" hidden></iframe>
         </div>
 
+        <div class="game-container" data-src="../Games/Challenge2/index.html">
+          <h3>Challenge 2 - Animal Feeder</h3>
+          <div class="button-container">
+            <button class="load-button">Load/Reload Game</button>
+            <button class="unload-button">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Games/Challenge2/Preview.png" alt="Placeholder Image" width="1000" height="700">
+          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+        </div>
+
+        <div class="game-container" data-src="../Games/Prototype3/index.html">
+          <h3>Prototype 3 - Worker Jumper (With Sound)</h3>
+          <div class="button-container">
+            <button class="load-button">Load/Reload Game</button>
+            <button class="unload-button">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Games/Prototype3/Preview.png" alt="Placeholder Image" width="1000" height="700">
+          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+        </div>
 
         <script>
           const gameContainers = document.querySelectorAll('.game-container');
+          let activeGameIframe = null; // Track the active game's iframe
 
           gameContainers.forEach((container) => {
               const unityGameIframe = container.querySelector('.unity-game');
               const placeholderImage = container.querySelector('.placeholder-image');
+              
               const loadButton = container.querySelector('.load-button');
-              const unloadButton = container.querySelector('.unload-button');
+              const gameSrc = container.getAttribute('data-src'); // Get the data-src attribute
 
               loadButton.addEventListener('click', () => {
-                  unityGameIframe.src = '../Games/CreateWithCode1.0/index.html';
-                  unityGameIframe.hidden = false;
-                  unityGameIframe.style.height = '700px'; // Adjust the height as needed
-                  placeholderImage.hidden = true;
+                // Unload other games
+                gameContainers.forEach((otherContainer) => {
+                  const otherIframe = otherContainer.querySelector('.unity-game');
+                  const otherPlaceholder = otherContainer.querySelector('.placeholder-image');
+
+                  if (otherIframe !== unityGameIframe) {
+                    otherIframe.src = 'about:blank';
+                    otherIframe.hidden = true;
+                    otherIframe.style.height = '0';
+                    otherPlaceholder.style.display = 'block';
+                  }
+                });
+
+                // Load current game
+                unityGameIframe.src = gameSrc; // Set the game source
+                unityGameIframe.hidden = false; // Show game
+                unityGameIframe.style.height = '700px'; // Give game height
+                placeholderImage.style.display = 'none'; // Hide preview image
+                placeholderImage.hidden = true; // Hide preview image
               });
+
+              const unloadButton = container.querySelector('.unload-button');
 
               unloadButton.addEventListener('click', () => {
                   unityGameIframe.src = 'about:blank';
                   unityGameIframe.hidden = true;
                   unityGameIframe.style.height = '0';
+                  placeholderImage.style.display = 'block'; 
                   placeholderImage.hidden = false;
               });
           });
