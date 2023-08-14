@@ -1,281 +1,120 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" type="text/css" href="navbar.css">
-        <link rel="stylesheet" type="text/css" href="sidebar.css">
-        <title>Projects</title>
+      <link rel="stylesheet" type="text/css" href="grid.css">
+      <link rel="stylesheet" type="text/css" href="navbar.css">
+      <link rel="stylesheet" type="text/css" href="footer.css">
     </head>
     <body>
-        <header class="navbar">
-            <div class="container">
-              <h1 class="logo">Portfolio</h1>
-              <nav>
-                <ul>
-                  <li><a class="active" href="">Projects</a></li>
-                  <li><a href="about.html">About</a></li>
-                </ul>
-              </nav>
-            </div>
-          </header>
 
-        <div class="sidebar">
-        <ul>
-            <li><a href="#Rogue-Like">Rogue-Like</a></li>
-            <li><a href="#Uno">Uno</a></li>
-            <li><a href="#AOE">AOE Remake</a></li>
-            <li><a href="#MonsterMaze">Monster Maze</a></li>
-            <li><a href="#Asteroids">Asteroids</a></li>
-            <li><a href="#Snake">Snake</a></li>
-            <!-- Add more projects here -->
+      <nav class="navbar">
+        <h2 class="navbar-header">Reece Waite</h2>
+        <ul class="navbar-links">
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <section class="banner">
+        <h1>Portfolio</h1>
+      </section>
+
+      <div class="grid-container">
+        <div class="flex-grid">
+
+          <a href="Projects/asteroids2.html">
+            <div class = "image-card">
+              <img src="Assets/Asteroids2.png" alt="Image 2">
+              <div class="overlay">
+                <h2>Asteroids 2</h2>
+                <p>I again set out to create Asteroids but this time I used C++ with entt for ECS design structure and SFML for 2D visuals. I set out to revisit my C++ skills, create a game using ECS to ultimately be able to optimise a game's runtime. I am still working on this project, I want to add the alien ships, particle and sound effects as well as convert the highscore functionality to a leaderboard with usernames.</p>
+              </div>
+            </a>
+          </div>
+
+          <a href="Projects/juniorProgrammer.html">
+            <div class = "image-card">
+              <img src="Assets/JuniorProgrammer.png" alt="Image 2">
+              <div class="overlay">
+                <h2>Junior Programmer Unity Course</h2>
+                <p>I wanted to make sure my game development foundations were solid as well as getting more comfortable with a game engine like Unity.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="Projects/rogue-like.html"></a>
+            <div class = "image-card">
+              <img src="Assets/Rogue-Like.png" alt="Image 2">
+              <div class="overlay">
+                <h2>Rogue-Like Game</h2>
+                <p>Using Unity, I wanted to try a larger project in unity to learn more about the software such as combat game logic, swapable weapons, animations, events system and dungeon generation. I still am working on this project as I still wish to explore more dungeon generation, inventory system, particle and sound effects as well as optimisations.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="Projects/uno.html">
+            <div class = "image-card">
+              <img src="Assets/Uno1.png" alt="Image 3">
+              <div class="overlay">
+                <h2>Uno Game</h2>
+                <p>Using Socket.IO, I wanted to recreate the classic UNO card game but I wanted to be able to play it with my friends during covid. This gave me a good excuse to dive into the logic behind multiplayer games. I chose to use socket.IO due to its fast nature and easy tracking of players.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="Projects/aoe.html">
+            <div class = "image-card">
+              <img src="Assets/AOE.png" alt="Image 3">
+              <div class="overlay">
+                <h2>Age Of Empires</h2>
+                <p>Using p5.js, I wanted to recreate the DS Age of Empires games as I wanted to explore UI, mouse controls, resource managements and a createable structures and units.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="Projects/monsterMaze.html">
+            <div class = "image-card">
+              <img src="Assets/MonsterMaze1.png" alt="Image 3">
+              <div class="overlay">
+                <h2>Monster Maze</h2>
+                <p>Using p5.js (2d), I wanted to apply my Mathematics from A Level to recreate 3D graphics without outside research of 3D graphics to learn first hand the issues that appear when rendering 3D graphics. I have since after this project learnt the various procedures that modern software's use to render 3D graphics, especially learnt from my 3rd year Graphics module.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="Projects/asteroids.html">
+            <div class = "image-card">
+              <img src="Assets/Asteroids.png" alt="Image 3">
+              <div class="overlay">
+                <h2>Asteroids</h2>
+                <p>Using p5.js, recreated the classic Asteroids game. This was my attempt at a larger game bigger than snake, connect four, tictactoe or chess.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="Projects/snake.html">
+            <div class = "image-card">
+              <img src="Assets/Snake.png" alt="Image 3">
+              <div class="overlay">
+                <h2>Snake Algorithm</h2>
+                <p>Using p5.js, recreated snake and then hooked up a path finding algorithm</p>
+              </div>
+            </div>
+          </a>
+
         </div>
+      </div>
 
-        <div class="sections-container">
-            <div class="project-section" id="Rogue-Like">
-                <h1>Rogue-Like Game</h1>
-                <div class="main-container">
-                    <div class="left-container">
-                       <img src="Assets/Rogue-Like.png">
-                    </div>
-                    <div class="right-container">
-                        <h2>Specification</h2>
-                        <div class="spec">
-                            <ul>
-                                <li>Infinite dungeon crawler via levels, dying puts you back to the first level<br></li>
-                                <li>System that allows you to keep a small portion of gain strength from previous runs<br></li>
-                                <li>A sekiro inspired combat system for 2D combat<br></li>
-                                <li>Character load and save system<br></li>
-                                <li>A set of weapons (with movements) and armour</li>
-                              </ul>
-                              <ul>
-                                <li>Coded in C#</li>
-                                <li>Makes use of the Unity Game Engine</li>
-                                <li>Pixel art and animation are drawn by myself</li>
-                              </ul>
-                        </div>
-                        <h2>Previous Development (Summer 2022)</h2>
-                        <p>Initially a group project, set out to make a basic Rogue-Like Game and learn game development skills. 
-                            Due to many of the members having other commitments most of them did not have for any contributions. 
-                            One member draw a few pieces of concept art and another coded a brief skeleton of a stats system. 
-                            These contributions were very minor and with no intention of any other members to continue this project 
-                            and the majority of the work up to this stage coming from myself, 
-                            I decided to turn this into my own solo project. This allows me to further refine my game development 
-                            skills and getting the game closer to a finish state will allow me to utilising finishing technologies
-                             such as particles effects, visual effects, optimisations and compatibity of devices that can run the game.</p>
-                        <h2>Current Development (Summer 2023)</h2>
-                        <p>My goal at the moment is to complete the most basic of systems such as combat, procedure level generation and 
-                            basic progression system to round off the game play loop. I then want to finish off the game in that state but 
-                            still allowing any new content to be added when needed.</p>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="project-section" id="Uno">
-                <h1>Uno Game</h1>
-                <div class="main-container">
-                    <div class="left-container">
-                        <div style="display: flex; flex-direction: column; max-width: 100%;">
-                            <img style="flex-basis: 20%" src="Assets/Uno1.png">
-                            <img style="flex-basis: 80%" src="Assets/Uno2.png">
-                        </div>
-                    </div>
-                    <div class="right-container">
-                        <h2>Specification</h2>
-                        <div class="spec">
-                            <ul>
-                                <li>Multiplayer via browser link<br></li>
-                                <li>Allowed an arbitrary number of people to join<br></li>
-                                <li>Apply the basic set of Uno rules<br></li>
-                                <li>Allow users to name themselves</li>
-                            </ul>
-                            <ul>
-                                <li>Coded in Javascript<br></li>
-                                <li>Makes use of Node.js for server hosting<br></li>
-                                <li>Uses socket.io for communication between server and clients</li>
-                            </ul>
-                        </div>
-                        <h2>Previous Development (Summer 2020)</h2>
-                        <p>Development was over a week and due to covid I could spend all my time doing it. 
-                            This was my first experience with anything multiplayer or any communication between servers. 
-                            I decided to user sockets are they maintain connections with the player allowing faster and 
-                            2 way communications. I wanted to simulate a real multiplayer game and avoid potentially cheating 
-                            by simulating the logic rules on the server as well as making the client only allow valid moves. 
-                            The clients only request to make a move and the server has to approve the move to send out the 
-                            updated state of the game. I had little experience with visuals in the browser so I essentially 
-                            manually set the locations and angles of the cards present as well as working out the angles that 
-                            each other player would be sitting round the centre cards. If it was to remake this, I would 
-                            definitely look for some library that would achieve this for me as well as allowing animations 
-                            for card playing and effects. One feature which I did not manage to finish as it cause several 
-                            bugs, was the uno button which announces when you will have one card. This was mostly due to my 
-                            code not being very organised making it very hard to track origins of bugs however it was an good 
-                            lesson in why organising code bases are very important even for small projects like this.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-section" id="AOE">
-                <h1>Age of Empires Remake</h1>
-                <div class="main-container">
-                    <div class="left-container">
-                        <img src="Assets/AOE.png">
-                    </div>
-                    <div class="right-container">
-                        <h2>Specification</h2>
-                        <div class="spec">
-                            <ul>
-                                <li>Terrain and resource generation<br></li>
-                                <li>Buildings<br></li>
-                                <li>Moving friendly units<br></li>
-                                <li>End a player turn and allow next player<br></li>
-                                <li>Allow opposing units to fight each other<br></li>
-                                <li>Add stats and graphics of units<br></li>
-                                <li>Add attacking of buildings<br></li>
-                                <li>Add a win condition</li>
-                            </ul>
-                            <ul>
-                                <li>Coded in Javascript<br></li>
-                                <li>Makes use of the 2D p5 library<br></li>
-                                <li>Graphics are redrawn pixel based on the original game</li>
-                            </ul>
-                        </div>
-                        <h2>Development (September 2020)</h2>
-                        <p>I wanted to attempt a small recreation of the Age of Empires DS game as I wanted to try and make a game 
-                            with turn based moves, resource collections and none-orthographical 2D perspective. The progress I made 
-                            on this project was adding terrain generation, resource collection, building menus and interactions, 
-                            training and moving friendly units and lastly the changing of turns which allowed the other player to move. 
-                            The player movement had to work out each square that the unit could move to account for how far the unit can 
-                            move as well as how the terrain will affect this distant. I then highlighted these squares and allowed the 
-                            player to click on them to move there. What was left to add was the combat system itself which would not be 
-                            too hard to implement as they are just interactions between 2 opposing unit stats. The more complex system 
-                            would be the buffs as enemies get buffs depending on the type of terrain square they are in.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-section" id="MonsterMaze">
-                <h1>3D Monster Maze Game</h1>
-                <div class="main-container">
-                    <div class="left-container">
-                        <div class="two-images">
-                            <img src="Assets/MonsterMaze2.png">
-                            <img src="Assets/MonsterMaze1.png">
-                        </div>
-                    </div>
-                    <div class="right-container">
-                        <h2>Specification</h2>
-                        <div class="spec">
-                            <ul>
-                                <li>3D Projection of maze walls<br></li>
-                                <li>Being able to look up and down in 3D<br></li>
-                                <li>Collisions stop you from walking through walls<br></li>
-                                <li>Maze procedurally generation<br></li>
-                                <li>Leaderboard store top times of finishing the maze<br></li>
-                                <li>GUI that tells you the controls<br></li>
-                                <li>Works purely in the web browser</li>
-                            </ul>
-                            <ul>
-                                <li>Coded in Javascript<br></li>
-                                <li>Makes use of the 2D p5 library<br></li>
-                                <li>Hosted publicly via GitHub at: <a href="https://mithkareece.github.io/MonsterMaze/">https://mithkareece.github.io/MonsterMaze/</a></li>
-                            </ul>
-                        </div>
-                        <h2>Development (Jan-Mar 2020)</h2>
-                        <p>This was the project for year 13 Computer Science coursework, after being inspired by many technologies such as AI and Computer 
-                            Graphics and wanted to do both. I wanted to see if I could apply my Maths and Further Maths knowledge to achieve 3D graphics. 
-                            First, I tried raycasting like seen in the original Doom game however I wanted the ability to look up and down. I then used plane 
-                            and vector maths to find intersections of point on a viewing plane I defined. I then came up with my own clipping algorithm which 
-                            would essentially project a polygon onto a plane and then work out new 2D vertices within the clipping plane. This did come with 
-                            some issues and helped me understand why we only project triangles in 3D graphics instead of polygons. I further used raycasting 
-                            to determine the depth of an object to remove unseen objects as well as order the drawing of projected polygons. This is as far 
-                            as I got with the 3D graphics as I then moved onto wall collisions to stop player moving through wall. I also made a main menu used 
-                            to pause the game as well as display a win/lose screen and option to do another level. For the maze I also used a 2D maze generation 
-                            algorithm which I had to map to 3D wall objects however instead of each wall being single objects, I merge consecutive wall into 
-                            single wall objects to reduce the number of objects. In addition, because I also wanted to do something with AI, I added a monster 
-                            which can traverse the maze and attempted to make him learn how to find the player using Q-Learning. Now looking back on it, this is 
-                            not really an good use of Q-Learning AI and also I never setup an environment to train the AI itself. This meant the AI was only 
-                            learning during your run and would then reset every run and essentially always be stuck on the random exploring phase. However, I did 
-                            still really enjoy looking into how Q-Learning actually works with reinforcement learning and how it is incorporated with neural 
-                            networks for large state actions spaces.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-section" id="Asteroids">
-                <h1>Asteroids</h1>
-                <div class="main-container">
-                    <div class="left-container">
-                        <img src="Assets/Asteroids.png">
-                    </div>
-                    <div class="right-container">
-                        <h2>Specification</h2>
-                        <div class="spec">
-                            <ul>
-                                <li>Movement and shooting of the player ship<br></li>
-                                <li>Asteroids split when hit<br></li>
-                                <li>Asteroids can hit each other as well as the player<br></li>
-                                <li>Everything is wrapped around the screen<br></li>
-                                <li>Players have 3 lives and a score<br></li>
-                                <li>Alienship that moves around and shoots at you</li>
-                            </ul>
-                            <ul>
-                                <li>Coded in Javascript<br></li>
-                                <li>Makes use of the 2D p5 library</li>
-                            </ul>
-                        </div>
-                        <h2>Development (Christmas 2019)</h2>
-                        <p>This was the first project of my own that really got me into computer science. I had been messing around with graphics using Javascript and the p5 
-                            library making art using recursively algorithms such as fractals. I wanted to make a simple game that I could easily use this graphics library 
-                            for the visuals and create everything else myself. I ended up making my own mini matrix library for some of the calculations as well as collision 
-                            detection and physics. I made use of noise to make the asteroids intersting shapes but that did make collision detection more difficult to implement. 
-                            In the end the game is mostly finished and very playable, bar the aliens which were only half implemented and disabled to be able to play. 
-                            I also added my own effects for such as fire animations for when the ship thrusts, particles effects that come off asteroids when the collide and 
-                            split and finally pieces of your ship when you get hit.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-section" id="Snake">
-                <h1>Snake Algorithm</h1>
-                <div class="main-container">
-                    <div class="left-container">
-                        <img src="Assets/Snake.png">
-                    </div>
-                    <div class="right-container">
-                        <h2>Specification</h2>
-                        <div class="spec">
-                            <ul>
-                                <li>Counter of length of snake<br></li>
-                                <li>Highest score of length of snake<br></li>
-                                <li>Randomly spawn food for snake<br></li>
-                                <li>Snake dies if it hits wall or itself<br></li>
-                                <li>Add algorithm to play snake for me</li>
-                            </ul>
-                            <ul>
-                                <li>Coded in Javascript<br></li>
-                                <li>Makes use of the 2D p5 library<br></li>
-                            </ul>
-                        </div>
-                        <h2>Development (March 2019)</h2>
-                        <p>I first recreated the game snaked by trying to efficiently implement the snake as well as the collisions. 
-                            This was achieved by having a queue of points to represents the snake and each move would added a head to 
-                            the front of the snake and remove the end of the tail. When the snake eats food it would just skip one step 
-                            of removing the tail to increase the length of the snake. Then the collision was only checked against the 
-                            square the next head was going to be, whether it was out of bounds or part of the snake. Then instead of 
-                            manually playing the game I wanted to experiment with some algorithm for the snake. For example, a basic but 
-                            effective algorithm is to just span the rows of the grid leaving one space, essentially moving across every row 
-                            and then back up to the top. This is a slow algorithm however will always give the best results. Secondly, a 
-                            made an algorithm that would path find to the food around its tail in the shortest steps. This made the snake 
-                            very quick to the food and increasing length however could easily lead to trapping itself.</p>
-                    </div>
-                </div>
-                <div>
-                    <video controls width="500" height="500">
-                        <source src="Assets/SnakeAlgorithm.mp4" type="video/mp4">
-                        <p>Your browser does not support the video tag.</p>
-                    </video>
-                </div>
-            </div>
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="reece.waite1@email.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
         </div>
+      </footer>
     </body>
 </html>
