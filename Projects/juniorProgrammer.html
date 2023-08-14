@@ -10,7 +10,7 @@
         <h2 class="navbar-header">Reece Waite</h2>
         <ul class="navbar-links">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="../cv.html">CV</a></li>
         </ul>
       </nav>
 
@@ -35,7 +35,57 @@
           <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
           <p class="description">Section description here.</p>
         </div>
-      </div>
+
+
+        <div class="game-container">
+          <h3>1.0 - Coop Car Race</h3>
+          <div class="button-container">
+            <button class="load-button">Load/Reload Game</button>
+            <button class="unload-button">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Assets/CreateWithCode1.0.png" alt="Placeholder Image" width="1000" height="700">
+          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+        </div>
+        
+        <div class="game-container">
+          <h3>1.0 - Coop Car Race</h3>
+          <div class="button-container">
+            <button class="load-button">Load/Reload Game</button>
+            <button class="unload-button">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Assets/CreateWithCode1.0.png" alt="Placeholder Image" width="1000" height="700">
+          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+        </div>
+
+
+        <script>
+          const gameContainers = document.querySelectorAll('.game-container');
+
+          gameContainers.forEach((container) => {
+              const unityGameIframe = container.querySelector('.unity-game');
+              const placeholderImage = container.querySelector('.placeholder-image');
+              const loadButton = container.querySelector('.load-button');
+              const unloadButton = container.querySelector('.unload-button');
+
+              loadButton.addEventListener('click', () => {
+                  unityGameIframe.src = '../Games/CreateWithCode1.0/index.html';
+                  unityGameIframe.hidden = false;
+                  unityGameIframe.style.height = '700px'; // Adjust the height as needed
+                  placeholderImage.hidden = true;
+              });
+
+              unloadButton.addEventListener('click', () => {
+                  unityGameIframe.src = 'about:blank';
+                  unityGameIframe.hidden = true;
+                  unityGameIframe.style.height = '0';
+                  placeholderImage.hidden = false;
+              });
+          });
+        </script>
+
+
+
+        </div>
       </div>
 
       <footer class="bottom-banner">
