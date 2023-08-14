@@ -21,6 +21,7 @@ body {
 .project-title {
   font-size: 5rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   padding: 0;
 }
 
@@ -31,8 +32,8 @@ body {
 }
 
 .project-image {
-  width: auto;
-  height: 25rem;
+  width: 50%;
+  height: auto;
   margin-top: 0;
   padding: 0;
 }
@@ -54,4 +55,26 @@ body {
 .project-video {
   width: 100%;
   margin-top: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.tags div {
+  background-color: brown;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  margin: 0 0;
+  display: inline-block;
+  color: white;
+  font-size: 1rem;
+}
+
+.section-title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 5rem;
 }

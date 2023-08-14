@@ -16,16 +16,35 @@
 
       <div class="main">
         <h1 class="project-title">Asteroids C++</h1>
-        <div class="section1">
+        <section class="section1">
           <img class="project-image" src="../Assets/Asteroids2.png"  alt="Project Image" >
-          <p class="description">Project description here.Project description here.Project description here.Project description here.Project description here.</p>
-        </div>
+          <section>
+            <h3>Development - July-Current 2023</h3>
+            <p class="description">
+              To reinforce my C++ skills and to learn ECS I created Asteroids again. I used entt ECS library and sfml for visuals. 
+              This involved creating a way to manipulate and traverse different game scenes achieved by creating a scene manager. 
+              This scene manager involves tracking scenes which track entities and systems. Scenes can be created, deleted or paused 
+              which affect the entities and systems of the scene. A separate system manager controls the actual creation, deletion 
+              and updating of the systems in use. Systems, scene manager and system manager can communciate through events using 
+              entt event dispatcher. The rest of the Asteroid game is also recreated using this new structure and plays like my 
+              previous JS version. The additional content consists of a main menu, pause menu and saving of high score. Later I wish 
+              to polish the game using particle and sound effects as well as optimisations and visual improvements.</p>
+            <div class="tags">
+              <div style="background-color: rgb(218, 53, 16)">C++</div>
+              <div style="background-color: rgb(223, 106, 11)">Entt</div>
+              <div style="background-color: rgb(60, 131, 3)">SFML</div>
+              <div style="background-color: rgb(41, 3, 131)">Scene Management</div>
+              <div style="background-color: rgb(3, 101, 131)">Pausing</div>
+              <div style="background-color: rgb(80, 3, 131)">Event System</div>
+            </div>
+         </section>
+        </section>
 
-        <h3 class="section-title">Video Title</h3>
-        <div class="section2">
-          <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
+        <h3 class="section-title">Gameplay</h3>
+        <section class="section2">
+          <video src="../Assets/Asteroids2.mp4" controls class="project-video"></video>
           <p class="description">Section description here.</p>
-        </div>
+        </section>
       </div>
       </div>
 
