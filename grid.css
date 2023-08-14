@@ -1,0 +1,19 @@
+
+.grid-container {
+  margin: 0 1rem;
+  background-color:blueviolet;
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.flex-grid img {
+  width: 500px; 
+  height: 300px;
+  object-fit: cover;
+}
