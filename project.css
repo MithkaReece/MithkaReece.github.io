@@ -40,6 +40,7 @@ body {
 
 .description {
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 
 .section-title {
@@ -50,10 +51,13 @@ body {
 .section2 {
   display:flex;
   gap: 2rem;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;  
 }
 
 .project-video {
-  width: 100%;
+  width: 80%;
   margin-top: 0;
 }
 
@@ -95,7 +99,16 @@ body {
 }
 
 .button-container button {
+  background-color: rgba(0, 0, 0, 0);
   font-size: 2rem;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.button-container button:hover {
+  color: rgb(0, 162, 255);
 }
 
 .game-container h3 {

@@ -19,9 +19,21 @@
         <section class="section1">
           <img class="project-image" src="../Assets/DurJam.jpg"  alt="Project Image" >
           <section>
+            <div class="links" style="padding-bottom: 1rem; margin:0"><a style="margin:0" href="https://devpost.com/software/re-sources">DevPost</a></div>
             <h3>Development - August 2020</h3>
-            <p class="description">...</p>
-            <a href="https://devpost.com/software/re-sources">DevPost</a>
+            <p class="description">During the four day DurJam, my team of four set out to make a unique survival game. 
+              For all team members this was the first Collaborate project we had done and demonstrated why version control 
+              is so important. We initially used an online editor glitch which we wrote on at the same time. This allowed us to
+              easily see others code as they were coding but a huge problem that was identified was not being able to test our code 
+              if anyone's code was incomplete. This was less of an issue during this short time frame as many of us did not code at 
+              the same time however it did lead us to copy a version to github to work simultaneously and merge our work at the end. 
+              We achieve some of our goals such as a randomly generated planet, rotating gravity at planet corners to allow player to 
+              walk all the way around the planet, collecting of resources, inventory system and functional survival bars such as oxygen 
+              and food. The player can then venture to a new planet getting in its ship with f and flying to a new planet. Objectives that 
+              still remained were adding specific ores to planets, adding more variety to planets, crafting system and loading resources to 
+              fuel the rocket.
+            </p>
+            
             <div class="tags">
               <div style="background-color: rgb(218, 53, 16)">World Editing</div>
               <div style="background-color: rgb(223, 106, 11)">Gravity Altering</div>
@@ -34,22 +46,20 @@
 
         <h3 class="section-title">Gameplay</h3>
         <section class="section2">
-          <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
-          <p class="description">Section description here.</p>
+          <video src="../Assets/DurJam.mp4" controls class="project-video"></video>
         </section>
 
         <div class="gameContainer"></div>
-          <h1>Embedded Game (with sound)</h1>
-          <p>Controls: <br>
-          Move = WASD/Arrow Keys <br>
-          Interact = F</p>
-          <div class="button-container">
-            <button class="loadGameButton">Load/Reload Game</button>
-            <button class="unloadGameButton">Unload Game</button>
-          </div>
-          <img class="placeholder-image" src="../Games/DurJam Re-Sources/Preview.png" alt="Placeholder Image" width="1370px" height=auto>
-          <iframe class="game" width="1370px" height="0" hidden></iframe>
+        <h3 class="section-title">Embedded Game (with sound)</h3>
+        <h2>Controls: <br>
+        Move = WASD/Arrow Keys <br>
+        Interact = F</h2>
+        <div class="button-container">
+          <button class="loadGameButton">Load/Reload Game</button>
+          <button class="unloadGameButton">Unload Game</button>
         </div>
+        <img class="placeholder-image" src="../Games/DurJam Re-Sources/Preview.png" alt="Placeholder Image" width="1370px" height=auto>
+        <iframe class="game" width="1370px" height="0" hidden></iframe>
 
         <script>
           const gameFrame = document.querySelector(".game");

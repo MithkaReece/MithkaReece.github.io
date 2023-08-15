@@ -17,7 +17,7 @@
       <div class="main">
         <h1 class="project-title">3D Monster Maze</h1>
         <section class="section1">
-          <img class="project-image" src="../Assets/MonsterMaze1.png"  alt="Project Image" >
+          <img class="project-image" src="../Assets/MonsterMaze2.png"  alt="Project Image" >
           <section>
             <h3>Development - January-March 2020</h3>
             <p class="description">This was the project for year 13 Computer Science coursework, after being inspired by many technologies such as AI and Computer 
@@ -49,10 +49,44 @@
 
         <h3 class="section-title">Gameplay</h3>
         <section class="section2">
-          <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
-          <p class="description">Section description here.</p>
+          <video src="../Assets/MonsterMaze.mp4" controls class="project-video"></video>
         </section>
-      </div>
+
+      
+
+        <div class="gameContainer"></div>
+        <h3 class="section-title">Embedded Game</h3>
+        <div class="button-container">
+          <button class="loadGameButton">Load/Reload Game</button>
+          <button class="unloadGameButton">Unload Game</button>
+        </div>
+        <img class="placeholder-image" src="../Assets/MonsterMaze1.png" alt="Placeholder Image" width="1000" height=auto>
+        <iframe class="game" width="1000" height="0" hidden></iframe>
+
+        <script>
+          const gameFrame = document.querySelector(".game");
+          const placeholderImage = document.querySelector('.placeholder-image');
+
+          const loadGameButton = document.querySelector(".loadGameButton");
+          const unloadGameButton = document.querySelector(".unloadGameButton");
+
+          loadGameButton.addEventListener("click", function() {
+            gameFrame.src = "../Games/MonsterMaze/index.html";
+            gameFrame.hidden = false; // Show game
+            gameFrame.style.height = '700px'; // Give game height
+            placeholderImage.style.display = 'none'; // Hide preview image
+            placeholderImage.hidden = true; // Hide preview image
+
+          });
+
+          unloadGameButton.addEventListener("click", function() {
+            gameFrame.src = "about:blank";
+            gameFrame.hidden = true;
+            gameFrame.style.height = "0";
+            placeholderImage.style.display = 'block'; 
+            placeholderImage.hidden = false;
+          });
+        </script>
       </div>
 
       <footer class="bottom-banner">
