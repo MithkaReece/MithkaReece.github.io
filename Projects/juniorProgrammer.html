@@ -16,26 +16,6 @@
 
       <div class="main">
         <h1 class="project-title">Junior Programmer Unity Course</h1>
-        <div class="section1">
-          <img class="project-image" src="../Assets/Asteroids2.png"  alt="Project Image" >
-          <section>
-            <h3>Development - Christmas 2019</h3>
-            <p class="description">This was the first project of my own that really got me into computer science. I had been messing around with graphics using Javascript and the p5 
-              library making art using recursively algorithms such as fractals. I wanted to make a simple game that I could easily use this graphics library 
-              for the visuals and create everything else myself. I ended up making my own mini matrix library for some of the calculations as well as collision 
-              detection and physics. I made use of noise to make the asteroids intersting shapes but that did make collision detection more difficult to implement. 
-              In the end the game is mostly finished and very playable, bar the aliens which were only half implemented and disabled to be able to play. 
-              I also added my own effects for such as fire animations for when the ship thrusts, particles effects that come off asteroids when the collide and 
-              split and finally pieces of your ship when you get hit.</p>
-          </section>
-        </div>
-
-        <h3 class="section-title">Video Title</h3>
-        <div class="section2">
-          <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
-          <p class="description">Section description here.</p>
-        </div>
-
 
         <div class="game-container" data-src="../Games/Prototype1/index.html">
           <h3>Prototype 1 - Coop Car Race</h3>
@@ -44,7 +24,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Prototype1/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
         
         <div class="game-container" data-src="../Games/Challenge1/index.html">
@@ -54,7 +34,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Challenge1/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <div class="game-container" data-src="../Games/Challenge2/index.html">
@@ -64,7 +44,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Challenge2/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <div class="game-container" data-src="../Games/Prototype3/index.html">
@@ -74,7 +54,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Prototype3/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <div class="game-container" data-src="../Games/Challenge3/index.html">
@@ -84,7 +64,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Challenge3/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <div class="game-container" data-src="../Games/Prototype4/index.html">
@@ -94,7 +74,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Prototype4/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <div class="game-container" data-src="../Games/Challenge4/index.html">
@@ -104,7 +84,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Challenge4/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <div class="game-container" data-src="../Games/Prototype5/index.html">
@@ -114,7 +94,7 @@
             <button class="unload-button">Unload Game</button>
           </div>
           <img class="placeholder-image" src="../Games/Prototype5/Preview.png" alt="Placeholder Image" width="1000" height=auto>
-          <iframe class="unity-game" width="1000" height="0" hidden></iframe>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
 
         <script>
@@ -122,7 +102,7 @@
           let activeGameIframe = null; // Track the active game's iframe
 
           gameContainers.forEach((container) => {
-              const unityGameIframe = container.querySelector('.unity-game');
+              const unityGameIframe = container.querySelector('.game');
               const placeholderImage = container.querySelector('.placeholder-image');
               
               const loadButton = container.querySelector('.load-button');
@@ -131,7 +111,7 @@
               loadButton.addEventListener('click', () => {
                 // Unload other games
                 gameContainers.forEach((otherContainer) => {
-                  const otherIframe = otherContainer.querySelector('.unity-game');
+                  const otherIframe = otherContainer.querySelector('.game');
                   const otherPlaceholder = otherContainer.querySelector('.placeholder-image');
 
                   if (otherIframe !== unityGameIframe) {

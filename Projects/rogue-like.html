@@ -47,8 +47,22 @@
 
         <h3 class="section-title">Gameplay</h3>
         <section class="section2">
-          <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
-          <p class="description">Section description here.</p>
+          <video src="../Assets/Rogue-Like.mp4" controls class="project-video"></video>
+          <p class="description">This video shows off the combat system which was the main focus of this project.
+             The system uses state machines to handle actions of both player and enemy as well as their animations. 
+            Events are used to communicate interactions between the player and enemy which affect their states. 
+            The combat system is inspired by Sekiro and Souls-Like combat, where player's can roll to dodge attacks, 
+            block to mitigate damage, parry to stunned the enemy if well timed. Additionally, player's and enemies 
+            have poise meters shown by the purple circle filling up and if attacked at full they are stunned and take 
+            a very large amount of damage, the meter does decrease shortly after therefore can only be triggered after many
+            consecutive attacks. The ring below the player and enemy also show the amount of health left. Additionally, the 
+            weapon sprites are dynamically placed and animated via transformations, allowing any weapon sprite to be swapped 
+            out with a different one. This allows many weapons to share certain attack animations as the animation is only 
+            dependent on the character. The player and enemy use the same stick character base for their animations, the only 
+            different is the player has some clothes drawn over the top, this allows player's and enemies to share those animations. 
+            I also looked into converting 3D animations into 2D pixel art animations which allows easy manipulation and creations of 
+            characters without having to redraw animations the same way Dead Cells achieve this to automate more of the animation process.
+          </p>
         </section>
       </div>
       </div>
