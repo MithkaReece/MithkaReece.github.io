@@ -28,7 +28,7 @@ body {
 .section1 {
   display:flex;
   gap: 2rem;
-  align-items: center;
+
 }
 
 .project-image {
@@ -36,6 +36,7 @@ body {
   height: auto;
   margin-top: 0;
   padding: 0;
+  object-fit: cover;
 }
 
 .description {
@@ -134,3 +135,71 @@ body {
     border: none;
     overflow: hidden;
 }
+
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%); /*Vertically center arrow*/
+  z-index: 2000;
+}
+
+.left-arrow {
+  left: 1rem;
+  border-width: 3rem 3rem 3rem 0;
+  border-color: transparent white transparent transparent;
+  z-index: 1001;
+}
+
+.right-arrow {
+  right: 1rem;
+  border-width: 3rem 0 3rem 3rem;
+  border-color: transparent transparent transparent white;
+  z-index: 1001;
+}
+
+.arrow-text {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.left-arrow .arrow-text {
+  padding: 1.28rem 2rem;
+  margin-top: 0;
+  margin-left: 3.02rem; /* Position the text to the right of the arrow */
+  color: rgb(0, 162, 255);
+  background-color: rgb(0, 0, 0);
+  border-radius: 0 100px 100px 0;
+
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+
+}
+
+.left-arrow:hover .arrow-text {
+  transform: translateY(-50%) scaleX(1);
+  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1.0); 
+}
+
+.right-arrow .arrow-text {
+  padding: 1.28rem 2rem;
+  right: 3.02rem; /* Position the text to the left of the arrow */
+  color: rgb(0, 162, 255);
+  background-color: rgba(0, 0, 0);
+  border-radius: 100px 0 0 100px;
+
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right center;
+
+}
+
+.right-arrow:hover .arrow-text {
+  transform: translateY(-50%) scaleX(1);
+  transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1.0); 
+}
+
