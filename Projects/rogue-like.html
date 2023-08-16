@@ -20,18 +20,24 @@
           <img class="project-image" src="../Assets/Rogue-Like.png"  alt="Project Image" >
           <section>
             <h3>Previous Development - Summer 2022</h3>
-            <p class="description">Initially a group project, set out to make a basic Rogue-Like Game and learn game development skills. 
-              Due to many of the members having other commitments most of them did not have for any contributions. 
-              One member draw a few pieces of concept art and another coded a brief skeleton of a stats system. 
-              These contributions were very minor and with no intention of any other members to continue this project 
-              and the majority of the work up to this stage coming from myself, 
-              I decided to turn this into my own solo project. This allows me to further refine my game development 
-              skills and getting the game closer to a finish state will allow me to utilising finishing technologies
-               such as particles effects, visual effects, optimisations and compatibity of devices that can run the game.</p>
+            <p class="description">Initially conceived as a group project, our aim was to create a basic Rogue-Like 
+              Game and collectively acquire game development skills. However, due to various commitments, most 
+              members were unable to contribute significantly. A few members provided minimal input, such as a 
+              handful of concept art pieces and a rudimentary framework for a stats system.
+              </p><p>
+              Given the limited contributions and lack of ongoing commitment from other team members, coupled with 
+              the fact that the majority of the progress up to that point was driven by my efforts, I made the 
+              decision to transform this endeavor into a solo project. This choice affords me the opportunity to 
+              further refine my game development abilities. </p>
             <h3>Current Development - Summer 2023</h3>
-            <p class="description">My goal at the moment is to complete the most basic of systems such as combat, procedure level generation and 
-              basic progression system to round off the game play loop. I then want to finish off the game in that state but 
-              still allowing any new content to be added when needed.</p>
+            <p class="description">My current objective is to finalize the fundamental systems within the game, 
+              including combat mechanics, procedurally generated levels and a basic progression system. This will 
+              complete the core gameplay loop. Once these components are in place, I intend to consider the game in 
+              a finished state, yet retaining the flexibility to introduce new content as required.
+              </p><p>
+              Subsequently, refining the game to a polished state will allow me to incorporate additional elements 
+              such as particle effects, visual enhancements, optimization strategies and ensuring the game's compatibility 
+              across a range of devices capable of running it.</p>
             <div class="tags">
               <div style="background-color: rgb(16, 137, 218)">C#</div>
               <div style="background-color: rgb(218, 53, 16)">Unity</div>
@@ -47,22 +53,30 @@
 
         <h3 class="section-title">Gameplay</h3>
         <section class="section2">
+          <section>
+            <p class="description">This video showcases the primary focus of the project, the combat system. 
+              The mechanics employ state machines to govern both player and enemy actions along with their 
+              corresponding animations. Communication between the player and enemy is achieved through events, influencing their states.
+              </p><p>
+              The combat system draws inspiration from games like Sekiro and Souls-Like titles. Players can 
+              employ actions such as rolling to evade attacks, blocking to mitigate damage, and executing 
+              well-timed parries to stun enemies. A distinctive feature is the poise meter, depicted as a 
+              purple circle that fills up. When fully charged, it results in stunning the opponent and inflicting 
+              substantial damage. This effect, however, diminishes shortly after, making it possible only after a 
+              sequence of consecutive attacks. The circular indicators below the player and enemy portraits illustrate their remaining health.
+              </p><p>
+              Notably, the weapon sprites are dynamically positioned and animated through transformations. 
+              This dynamic framework permits the seamless swapping of weapon sprites, thereby enabling 
+              multiple weapons to share specific attack animations, with the animations being character-dependent. 
+              Both the player and enemy share the same stick character base for their animations, differentiating 
+              only by the addition of clothing overlays for the player. This smart approach allows animations to be shared between players and enemies.
+              </p><p>
+              Additionally, I explored the conversion of 3D animations into 2D pixel art animations. This 
+              technique simplifies character manipulation and creation, eliminating the need to redraw 
+              animations. Dead Cells uses a similar method to streamline the animation process.
+            </p>
+          </section>
           <video src="../Assets/Rogue-Like.mp4" controls class="project-video"></video>
-          <p class="description">This video shows off the combat system which was the main focus of this project.
-             The system uses state machines to handle actions of both player and enemy as well as their animations. 
-            Events are used to communicate interactions between the player and enemy which affect their states. 
-            The combat system is inspired by Sekiro and Souls-Like combat, where player's can roll to dodge attacks, 
-            block to mitigate damage, parry to stunned the enemy if well timed. Additionally, player's and enemies 
-            have poise meters shown by the purple circle filling up and if attacked at full they are stunned and take 
-            a very large amount of damage, the meter does decrease shortly after therefore can only be triggered after many
-            consecutive attacks. The ring below the player and enemy also show the amount of health left. Additionally, the 
-            weapon sprites are dynamically placed and animated via transformations, allowing any weapon sprite to be swapped 
-            out with a different one. This allows many weapons to share certain attack animations as the animation is only 
-            dependent on the character. The player and enemy use the same stick character base for their animations, the only 
-            different is the player has some clothes drawn over the top, this allows player's and enemies to share those animations. 
-            I also looked into converting 3D animations into 2D pixel art animations which allows easy manipulation and creations of 
-            characters without having to redraw animations the same way Dead Cells achieve this to automate more of the animation process.
-          </p>
         </section>
       </div>
       </div>

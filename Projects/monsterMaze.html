@@ -20,22 +20,38 @@
           <img class="project-image" src="../Assets/MonsterMaze2.png"  alt="Project Image" >
           <section>
             <h3>Development - January-March 2020</h3>
-            <p class="description">This was the project for year 13 Computer Science coursework, after being inspired by many technologies such as AI and Computer 
-              Graphics and wanted to do both. I wanted to see if I could apply my Maths and Further Maths knowledge to achieve 3D graphics. 
-              First, I tried raycasting like seen in the original Doom game however I wanted the ability to look up and down. I then used plane 
-              and vector maths to find intersections of point on a viewing plane I defined. I then came up with my own clipping algorithm which 
-              would essentially project a polygon onto a plane and then work out new 2D vertices within the clipping plane. This did come with 
-              some issues and helped me understand why we only project triangles in 3D graphics instead of polygons. I further used raycasting 
-              to determine the depth of an object to remove unseen objects as well as order the drawing of projected polygons. This is as far 
-              as I got with the 3D graphics as I then moved onto wall collisions to stop player moving through wall. I also made a main menu used 
-              to pause the game as well as display a win/lose screen and option to do another level. For the maze I also used a 2D maze generation 
-              algorithm which I had to map to 3D wall objects however instead of each wall being single objects, I merge consecutive wall into 
-              single wall objects to reduce the number of objects. In addition, because I also wanted to do something with AI, I added a monster 
-              which can traverse the maze and attempted to make him learn how to find the player using Q-Learning. Now looking back on it, this is 
-              not really an good use of Q-Learning AI and also I never setup an environment to train the AI itself. This meant the AI was only 
-              learning during your run and would then reset every run and essentially always be stuck on the random exploring phase. However, I did 
-              still really enjoy looking into how Q-Learning actually works with reinforcement learning and how it is incorporated with neural 
-              networks for large state actions spaces.</p>
+            <p class="description">This project emerged as a result of my fascination with technologies such 
+              as AI and computer graphics, which inspired me to combine both realms. The endeavor was undertaken 
+              as part of my year 13 Computer Science coursework. My goal was to test the application of my knowledge 
+              in Mathematics and Further Mathematics to achieve 3D graphics.
+              </p><p>
+              My initial approach involved experimenting with raycasting, akin to the technique employed in 
+              the original Doom game. However, I sought the capability to look both up and down, which led me 
+              to utilize plane and vector mathematics to determine point intersections on a defined viewing plane. 
+              To address the issue of creating a 3D environment while maintaining realistic perspectives, I devised 
+              my own clipping algorithm. This approach projected polygons onto a plane and then calculated new 2D 
+              vertices within the clipping plane. This endeavor was enlightening, highlighting the reasons why 
+              triangles are typically used instead of more complex polygons in 3D graphics.
+              </p><p>
+              Subsequently, I employed raycasting for depth determination, aiding in the removal of hidden 
+              objects and ordering the drawing of projected polygons. This marked the extent of my progress with 
+              3D graphics, after which I transitioned to implementing wall collision mechanics to prevent players 
+              from moving through walls.
+              </p><p>
+              Beyond graphics, I developed a main menu for pausing the game and displaying win/lose screens, 
+              alongside the option to proceed to another level. In the realm of maze creation, I utilized a 2D 
+              maze generation algorithm, transforming it into 3D wall objects. To optimize this process, I consolidated 
+              consecutive walls into single objects, reducing object count.
+              </p><p>
+              An additional dimension was introduced with the inclusion of an AI-controlled monster that 
+              navigates the maze. My goal was to make the monster learn to find the player using Q-Learning. 
+              In retrospect, the implementation fell short, as the AI's learning was restricted to individual runs, 
+              preventing it from acquiring a substantial learning curve. Additionally, my exploration of Q-Learning 
+              revealed its interaction with reinforcement learning and neural networks for addressing complex 
+              state-action spaces.
+              </p><p>
+              This project not only allowed me to explore the intersection of AI and computer graphics but 
+              also highlighted the iterative nature of learning and refinement in the development process.</p>
             <div class="tags">
               <div style="background-color: rgb(218, 53, 16)">3D Graphics</div>
               <div style="background-color: rgb(223, 106, 11)">Collision Detection</div>

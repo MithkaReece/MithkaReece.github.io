@@ -20,13 +20,25 @@
           <img class="project-image" src="../Assets/Asteroids.png"  alt="Project Image" >
           <section>
             <h3>Development - Christmas 2019</h3>
-            <p class="description">This was the first project of my own that really got me into computer science. I had been messing around with graphics using Javascript and the p5 
-              library making art using recursively algorithms such as fractals. I wanted to make a simple game that I could easily use this graphics library 
-              for the visuals and create everything else myself. I ended up making my own mini matrix library for some of the calculations as well as collision 
-              detection and physics. I made use of noise to make the asteroids intersting shapes but that did make collision detection more difficult to implement. 
-              In the end the game is mostly finished and very playable, bar the aliens which were only half implemented and disabled to be able to play. 
-              I also added my own effects for such as fire animations for when the ship thrusts, particles effects that come off asteroids when the collide and 
-              split and finally pieces of your ship when you get hit.</p>
+            <p class="description">This project marked my introduction to the realm of computer science, 
+              igniting my passion for the field. My journey began by tinkering with graphics using 
+              JavaScript and the p5 library, creating intricate art through recursive algorithms like 
+              fractals. Seeking to delve further, I decided to develop a straightforward game that 
+              leveraged the p5 library for visuals, allowing me to craft everything else from scratch.
+              </p><p>
+              In this pursuit, I crafted a miniature matrix library to facilitate various calculations, 
+              encompassing collision detection and physics. The incorporation of noise enabled the 
+              creation of visually engaging asteroid shapes, albeit posing challenges in the implementation 
+              of collision detection. Despite these obstacles, the game reached a highly playable state, 
+              with the exception of the aliens—partially implemented and subsequently disabled for smoother gameplay.
+              </p><p>
+              To enhance the gaming experience, I introduced a range of custom effects. For instance, 
+              animations were introduced for the ship's fiery thrust, particle effects emerged from 
+              asteroid collisions and splits, and pieces of the ship scattered upon impact.
+              </p><p>
+              This project, which originated as a simple game, led me down a path of exploration and 
+              discovery within computer science. It became a pivotal starting point that ignited my 
+              passion and set me on a trajectory of continuous learning and creativity.</p>
             <div class="tags">
               <div style="background-color: rgb(218, 53, 16)">Physics</div>
               <div style="background-color: rgb(223, 106, 11)">Collision Detection</div>
@@ -41,13 +53,24 @@
 
         <h3 class="section-title">Gameplay</h3>
         <section class="section2">
+          <section>
+          <p class="description">The project features a rocket that boasts maneuverability, enabling turns 
+            and thrust with a visually appealing fire triangle effect. The rocket can also shoot 
+            bullets aimed at asteroids.
+            </p><p>
+            When these bullets collide with asteroids, the latter splits into smaller fragments, accompanied 
+            by an impactful shattering particle effect. The game structure incorporates limited lives, 
+            although the score persists until all lives are depleted.
+            </p><p>
+            The ship's motion is bounded by screen boundaries, creating a wrapping effect. Conversely, 
+            asteroids are confined within proximity to the screen. New asteroids with diverse velocities 
+            dynamically enter from the screen's edges. Their distinctive shapes are achieved by perturbing 
+            points of a circular polygon through random noise.
+            </p><p>
+            This project illustrates a skillful combination of gameplay mechanics and visual effects, 
+            delivering an engaging and interactive experience for players.</p>
+          </section>
           <video src="../Assets/Asteroids.mp4" controls class="project-video"></video>
-          <p class="description">Rocket that can turn, thrust with a fire trangle effect and shoot bullets at asteroids.
-            Upon collision, asteroids split into smaller fragments with a shattering particle effect. 
-            Lives are limited, but the score persists until they're depleted. 
-            The ship is wrapped by the screen, whilst asteroids confine their existence close to the screen. 
-            Randomly generated asteroids enter with varying velocities from the screen's edges. 
-            Their shape is created by offsetting points of a circle polygon using random noise.</p>
         </section>
      
         <div class="gameContainer"></div>

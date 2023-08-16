@@ -20,16 +20,27 @@
           <img class="project-image" src="../Assets/Snake.png"  alt="Project Image" >
           <section>
             <h3>Development - March 2019</h3>
-            <p class="description">I first recreated the game snaked by trying to efficiently implement the snake as well as the collisions. 
-              This was achieved by having a queue of points to represents the snake and each move would added a head to 
-              the front of the snake and remove the end of the tail. When the snake eats food it would just skip one step 
-              of removing the tail to increase the length of the snake. Then the collision was only checked against the 
-              square the next head was going to be, whether it was out of bounds or part of the snake. Then instead of 
-              manually playing the game I wanted to experiment with some algorithm for the snake. For example, a basic but 
-              effective algorithm is to just span the rows of the grid leaving one space, essentially moving across every row 
-              and then back up to the top. This is a slow algorithm however will always give the best results. Secondly, a 
-              made an algorithm that would path find to the food around its tail in the shortest steps. This made the snake 
-              very quick to the food and increasing length however could easily lead to trapping itself.</p>
+            <p class="description">The project commenced with my recreation of the classic game Snake, with 
+              a key focus on implementing an efficient snake movement and collision system. I achieved this 
+              by utilizing a queue structure composed of points to represent the snake's body. Each movement 
+              update would add a new head point to the front of the queue while simultaneously removing the 
+              tail end point. In instances where the snake consumed food, this sequence of tail removal would 
+              skip one step, effectively lengthening the snake.
+              </p><p>
+              Collision detection was optimized to inspect only the square where the next head was projected 
+              to be. This process involved assessing whether this square was either out of bounds or a part 
+              of the snake's body.
+              </p><p>
+              Beyond manual gameplay, I was intrigued by experimenting with various algorithms for controlling 
+              the snake. One approach involved a basic yet effective strategy of systematically spanning rows 
+              of the grid, leaving one space unoccupied. While this technique yielded the best results, 
+              it was relatively slow. On the other hand, I devised an algorithm that would pathfind towards 
+              the food, circumnavigating the snake's tail, all within the shortest number of steps. This 
+              approach notably enabled the snake to swiftly reach the food and expand in length, but its 
+              susceptibility to self-trapping posed a challenge.
+              </p><p>
+              This project underscored the delicate balance between optimal gameplay strategies and potential 
+              pitfalls, offering insights into the complexities of algorithmic decision-making and game mechanics.</p>
             <div class="tags">
               <div style="background-color: rgb(16, 3, 131)">2D</div>
               <div style="background-color: rgb(218, 53, 16)">Pathfinding</div>
@@ -43,6 +54,42 @@
         <div class="section2">
           <video src="../Assets/SnakeAlgorithm.mp4" controls class="project-video"></video>
         </div>
+
+        <div class="gameContainer"></div>
+        <h3 class="section-title">Embedded Game</h3>
+        <div class="button-container">
+          <button class="loadGameButton">Load/Reload Game</button>
+          <button class="unloadGameButton">Unload Game</button>
+        </div>
+        <img class="placeholder-image" src="../Assets/Snake.png" alt="Placeholder Image" width="1000" height=auto>
+        <iframe class="game" width="1000" height="0" hidden></iframe>
+
+        <script>
+          const gameFrame = document.querySelector(".game");
+          const placeholderImage = document.querySelector('.placeholder-image');
+
+          const loadGameButton = document.querySelector(".loadGameButton");
+          const unloadGameButton = document.querySelector(".unloadGameButton");
+
+          loadGameButton.addEventListener("click", function() {
+            gameFrame.src = "../Games/Snake/index.html";
+            gameFrame.hidden = false; // Show game
+            gameFrame.style.height = '800px'; // Give game height
+            placeholderImage.style.display = 'none'; // Hide preview image
+            placeholderImage.hidden = true; // Hide preview image
+
+          });
+
+          unloadGameButton.addEventListener("click", function() {
+            gameFrame.src = "about:blank";
+            gameFrame.hidden = true;
+            gameFrame.style.height = "0";
+            placeholderImage.style.display = 'block'; 
+            placeholderImage.hidden = false;
+          });
+        </script>
+
+
       </div>
 
       <footer class="bottom-banner">

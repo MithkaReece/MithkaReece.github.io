@@ -20,15 +20,28 @@
           <img class="project-image" src="../Assets/AOE.png"  alt="Project Image" >
           <section>
             <h3>Development - September 2020</h3>
-            <p class="description">I wanted to attempt a small recreation of the Age of Empires DS game as I wanted to try and make a game 
-              with turn based moves, resource collections and none-orthographical 2D perspective. The progress I made 
-              on this project was adding terrain generation, resource collection, building menus and interactions, 
-              training and moving friendly units and lastly the changing of turns which allowed the other player to move. 
-              The player movement had to work out each square that the unit could move to account for how far the unit can 
-              move as well as how the terrain will affect this distant. I then highlighted these squares and allowed the 
-              player to click on them to move there. What was left to add was the combat system itself which would not be 
-              too hard to implement as they are just interactions between 2 opposing unit stats. The more complex system 
-              would be the buffs as enemies get buffs depending on the type of terrain square they are in.</p>
+            <p class="description">I embarked on a modest reimagining of the Age of Empires DS game, 
+              driven by my desire to explore the creation of a turn-based game with elements like resource 
+              gathering and a non-orthographic 2D perspective. My progress in this endeavor involved several key achievements.
+              </p><p>
+              I successfully integrated terrain generation, enabling the creation of diverse landscapes. 
+              Resource collection mechanics were implemented, allowing players to gather essential 
+              resources. Building menus and interactions were developed, providing players with the means 
+              to construct structures and engage with them.
+              </p><p>
+              Additionally, I tackled the intricacies of training and maneuvering friendly units. 
+              One noteworthy aspect was the turn-changing mechanism, enabling alternating player movements. 
+              To facilitate player movement, an algorithm was devised to calculate feasible unit paths based 
+              on movement capabilities and terrain influences. These valid paths were highlighted and could 
+              be selected by players for unit movement.
+              </p><p>
+              One significant task left to implement was the combat system itself. Although not 
+              overly complex, it involved interactions between opposing unit statistics. A more intricate 
+              system lay in the realm of buffs, where enemies were granted advantages contingent on the terrain type they occupied.
+              </p><p>
+              This project allowed me to grasp the foundations of turn-based gameplay, resource management 
+              and unit interactions, while also offering insights into the complexities of terrain-based 
+              effects on gameplay mechanics.</p>
             <div class="tags">
               <div style="background-color: rgb(218, 53, 16)">Tile System</div>
               <div style="background-color: rgb(223, 106, 11)">Turn Based</div>
@@ -41,9 +54,82 @@
 
         <h3 class="section-title">Gameplay (To Record)</h3>
         <section class="section2">
-          <video src="../Assets/.mp4" controls class="project-video"></video>
+          <section>
+            <p>
+              Firstly, note that due to limited sprites, the players do not start with two villagers even though they have 
+              the same sprite used. They actually start with one villager (the unit that can build structures) and a 
+              militia which is a basic combat unit (combat not implemented). In, addition any buildings that also do not 
+              have sprites drawn use the blue townhall as a placeholder.
+            </p>
+          </section>
+          <video src="../Assets/AOE.mp4" controls class="project-video"></video>
+          <section>
+            <p>
+            The demo showcases the gameplay mechanics of Age of Empires: Age of Kings, 
+            a turn-based strategy game. In this game, resources such as food and gold are integral and 
+            each unit is permitted specific actions per turn. When units are selected, their movement 
+            capabilities are visually highlighted. Once a unit is moved to a location, a user interface 
+            (UI) offers a range of potential actions possible for that square. Upon pressing "Enter," 
+            the turn shifts to the next player, allowing them to take their actions. It's worth noting 
+            that players can only manipulate their own units and interact with their own buildings.
+            </p><p>
+            The terrain is procedurally generated, incorporating diverse terrain square types. These 
+            squares impact the distance units can travel across them. Additionally, gold and food 
+            deposits are strategically placed, which villagers can utilize for construction. Certain 
+            buildings, highlighted in blue, can serve as foundations for the construction of other 
+            buildings. The game features several building types, including mills, mines, townhalls, 
+            castles, stables, and barracks. Mills and mines yield food or gold every turn, while 
+            townhalls can train villagers in one turn using up these resources. The intention was 
+            to expand this functionality to stables and barracks for training combat units.
+            </p><p>
+            The sidebar UI incorporates various options, such as settings, main menu, map view and 
+            an "unmoved unit finder" feature. A notable enhancement in this version compared to the 
+            DS version is the integration of mouse control, which offers a more efficient gameplay 
+            experience. However, traditional controls are retained, allowing players to traverse 
+            squares using WASD and select them using the space key.
+            </p>
+          </section>
         </section>
-      </div>
+
+
+      <div class="gameContainer"></div>
+        <h3 class="section-title">Embedded Game</h3>
+        <h2>Controls: <br>
+          Select = Mouse click or WASD (move square) and Space (select square) <br>
+          Zoom = Mouse Scroll <br>
+          Next Turn = Enter</h2>
+        <div class="button-container">
+          <button class="loadGameButton">Load/Reload Game</button>
+          <button class="unloadGameButton">Unload Game</button>
+        </div>
+        <img class="placeholder-image" src="../Assets/AOE.png" alt="Placeholder Image" width="1000" height=auto>
+        <iframe class="game" width="1000" height="0" hidden></iframe>
+
+        <script>
+          const gameFrame = document.querySelector(".game");
+          const placeholderImage = document.querySelector('.placeholder-image');
+
+          const loadGameButton = document.querySelector(".loadGameButton");
+          const unloadGameButton = document.querySelector(".unloadGameButton");
+
+          loadGameButton.addEventListener("click", function() {
+            gameFrame.src = "../Games/Age-Of-Empires/index.html";
+            gameFrame.hidden = false; // Show game
+            gameFrame.style.height = '700px'; // Give game height
+            placeholderImage.style.display = 'none'; // Hide preview image
+            placeholderImage.hidden = true; // Hide preview image
+
+          });
+
+          unloadGameButton.addEventListener("click", function() {
+            gameFrame.src = "about:blank";
+            gameFrame.hidden = true;
+            gameFrame.style.height = "0";
+            placeholderImage.style.display = 'block'; 
+            placeholderImage.hidden = false;
+          });
+        </script>
+        
       </div>
 
       <footer class="bottom-banner">
