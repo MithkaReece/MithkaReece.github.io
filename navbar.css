@@ -48,3 +48,29 @@ nav ul li a:hover {
   height: 7rem;
   position: relative;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+  }
+
+  .navbar-header {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+  }
+}

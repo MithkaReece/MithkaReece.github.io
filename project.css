@@ -17,6 +17,14 @@ body {
   justify-content: flex-start; /* Align content at the top */
 }
 
+p {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
 
 .project-title {
   font-size: 5rem;
@@ -64,7 +72,7 @@ body {
 }
 
 .section2 section {
-  width: 70%;
+  width: 90%;
 }
 
 .tags {
@@ -203,3 +211,100 @@ body {
   transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1.0); 
 }
 
+/* Styles for screens with a maximum width of 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  .main {
+    margin-top: 10rem; /* Reduce top margin for mobile */
+    padding: 2rem 8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  .project-title {
+    font-size: 4rem; /* Reduce font size for mobile */
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section1 {
+    display: block; /* Change to block display for mobile */
+  }
+
+  .project-image {
+    width: 100%; /* Make images full width for mobile */
+    margin-top: 1rem;
+  }
+
+  .description {
+    font-size: 1rem; /* Reduce font size for mobile */
+  }
+
+  .section-title {
+    font-size: 1.5rem; /* Reduce font size for mobile */
+    margin-top: 1rem;
+  }
+
+  .section2 {
+    display: block; /* Change to block display for mobile */
+    text-align: center;
+  }
+
+  .project-video {
+    width: 100%; /* Make video full width for mobile */
+    margin-top: 1rem;
+  }
+
+  .section2 section {
+    width: 100%; /* Make sections full width for mobile */
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap; /* Allow tags to wrap for mobile */
+    gap: 0.5rem;
+  }
+
+  .tags div {
+    font-size: 0.8rem; /* Reduce font size for mobile */
+  }
+
+  .section-title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem; /* Reduce font size for mobile */
+  }
+
+  .game-containter {
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically for mobile */
+    align-items: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .button-container button {
+    font-size: 1.5rem; /* Reduce font size for mobile */
+  }
+
+  .game-container h3 {
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+
+  .game,
+  .placeholder-image {
+    width: 100%; /* Make images full width for mobile */
+  }
+
+
+}
