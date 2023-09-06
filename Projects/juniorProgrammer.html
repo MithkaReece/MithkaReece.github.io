@@ -52,7 +52,8 @@
         </div>
 
         <div class="game-container" data-src="../Games/Prototype2/index.html">
-          <h3>Prototype 2 + Bonus Challenge - Animal Feeder</h3>
+          <h3>Prototype 2 + Bonus Challenge</h3>
+          <h3>Animal Feeder</h3>
           <div class="button-container">
             <button class="load-button">Load/Reload Game</button>
             <button class="unload-button">Unload Game</button>
@@ -167,6 +168,49 @@
           </div>
         </div>
 
+        <div class="game-container" data-src="../Games/BallCollector/index.html">
+          <h3>Optional Game</h3>
+          <h3>Made for mobile</h3>
+          <h3>Ball Collector</h3>
+          <div class="button-container">
+            <button class="load-button">Load/Reload Game</button>
+            <button class="unload-button">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Games/BallCollector/Preview.png" alt="Placeholder Image" width="323" height="700">
+          <iframe class="game" width="323" height="0" hidden></iframe>
+          <div class="tags">
+            <div style="background-color: rgb(218, 53, 16)">Mouse Control</div>
+            <div style="background-color: rgb(5, 104, 99)">Touch Control</div>
+            <div style="background-color: rgb(187, 169, 68)">Multi-Platform</div>
+            <div style="background-color: rgb(110, 11, 223)">UI</div>
+            <div style="background-color: rgb(11, 223, 75)">Scoring</div>
+            <div style="background-color: rgb(223, 11, 110)">Difficulty</div>
+          </div>
+        </div>
+
+        <div class="game-container" data-src="../Games/CookingGame/index.html">
+          <h3>Submission for OOP and persistent data</h3>
+          <h3>Following CodeMonkey's Course</h3>
+          <h3>Cooking Game</h3>
+          <div class="button-container">
+            <button class="load-button">Load/Reload Game</button>
+            <button class="unload-button">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Games/CookingGame/Preview.png" alt="Placeholder Image" width="1244" height=auto>
+          <iframe class="game" width="1244" height="0" hidden></iframe>
+          <div class="tags">
+            <div style="background-color: rgb(218, 53, 16)">Mouse Control</div>
+            <div style="background-color: rgb(5, 104, 99)">Controller Support</div>
+            <div style="background-color: rgb(187, 169, 68)">Multi-Platform</div>
+            <div style="background-color: rgb(110, 11, 223)">Extensive UI</div>
+            <div style="background-color: rgb(11, 223, 75)">Scoring</div>
+            <div style="background-color: rgb(223, 11, 110)">Sound Effects</div>
+            <div style="background-color: rgb(11, 209, 223)">Gameplay Loop</div>
+            <div style="background-color: rgb(233, 128, 80)">Rebindable Controls</div>
+            <div style="background-color: rgb(120, 167, 11)">Polish</div>
+          </div>
+        </div>
+
         <script>
           const gameContainers = document.querySelectorAll('.game-container');
           let activeGameIframe = null; // Track the active game's iframe
@@ -211,8 +255,6 @@
               });
           });
         </script>
-
-        <h1>Ongoing...</h1>
 
         
       </div>
