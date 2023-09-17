@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <h2 class="navbar-header">Reece Waite</h2>
+        <ul class="navbar-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../cv.html">CV</a></li>
+        </ul>
+      </nav>
+      <a class="arrow left-arrow" href="farming.html">
+        <span class="arrow-text">Farming Game</span>
+      </a>
+      <a class="arrow right-arrow" href="asteroids2.html">
+        <span class="arrow-text">Asteroids C++</span>
+      </a>
+
+      <div class="main">
+        <h1 class="project-title">2.5D Game</h1>
+        <section class="section2">
+          <img class="project-image" src="../Assets/25D.png"  >
+          <div class="tags">
+            <div style="background-color: rgb(65, 21, 149)">C#</div>
+            <div style="background-color:  rgb(84, 84, 84)">Unity</div>
+            <div style="background-color: rgb(60, 131, 3)">Tilemap</div>
+            <div style="background-color: rgb(41, 3, 131)">Custom Physics</div>
+          </div>
+          <section>
+            <h3>Development - September-Current 2023</h3>
+            <p> I first setup simple movement and animations for the player which from previous projects was a lot more 
+              straightforward. I use a basic Rigidbody2D for collisions when not airboard as no 2.5D aspects are needed. 
+              My custom physics, make Rigidbody2D kinematic whilst midair so I can handle the collisions, I prevent movement towards 
+              objects on collision. I keep track of the ground position of the player and check if this collides with a wall, if 
+              so I compare the player's height with the wall height saved within the tilemap. 
+              </p><p>
+              The height levels of all tiles are pre-generated for the level. This is done by traversing all the ground tiles and 
+              change level based on stairs. The wall heights are then calculated based on the first ground level that appear above it. 
+         </section>
+       
+
+        <h3 class="section-title">2.5D Jumping between levels</h3>
+        <section class="section2">
+          <video src="../Assets/25D.mp4" controls class="project-video""></video>
+        </section>
+
+      </section>
+      </div>
+      </div>
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>
