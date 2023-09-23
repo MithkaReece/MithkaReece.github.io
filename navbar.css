@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .navbar {
+  user-select: none;
   display: flex;
   justify-content:space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,12 +19,64 @@
   z-index: 1000; 
 }
 
+.navbar-left {
+  display:flex;
+  flex-direction: row;
+}
+
 .navbar-header {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
   margin: 0;
-  padding: 0 4rem;
+  padding-left: 4rem;
+  padding-right: 2rem;
   font-size: 50px;
+  margin-right: 0;
+  cursor: pointer;
+}
+.navbar-header:hover {
+  color: rgba(0, 162, 255, 0.9);
+  text-decoration: none;
+}
+
+.navbar-icons {
+  display: flex;
+  padding:0;
+  margin-left: 0;
   margin-right: auto;
 }
+
+.navbar-icons a img {
+  margin-right: 1rem;
+  height:3.5rem;
+  width: auto;
+}
+
+.email-icon{
+  background-color: white;
+}
+
+.navbar-icons a:hover .email-icon{
+  background-color:rgb(46,222,255);
+}
+
+.github-icon{
+  background-color: rgb(95, 24, 102);
+}
+
+.navbar-icons a:hover .github-icon{
+  background-color:rgb(192, 2, 192);
+}
+
+.linkedin-icon{
+  background-color: rgb(26,107,196);
+}
+
+.navbar-icons a:hover .linkedin-icon{
+  background-color:rgb(104, 180, 226);
+}
+
 
 .navbar-links {
   list-style: none;
@@ -34,7 +93,7 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2.5rem;
 }
 
 nav ul li a.active,
@@ -44,7 +103,7 @@ nav ul li a:hover {
 }
 
 .spacer {
-  background-color:aquamarine;
+  background-color:black;
   height: 7rem;
   position: relative;
 }
@@ -56,9 +115,15 @@ nav ul li a:hover {
     align-items: flex-start;
     padding: 1rem 1rem;
   }
+  
+  .navbar-left {
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 
   .navbar-header {
-    font-size: 30px;
+    font-size: 3rem;
     margin: 0;
     padding: 0;
     margin-bottom: 1rem;
@@ -71,6 +136,6 @@ nav ul li a:hover {
   }
 
   .navbar-links li {
-    margin: 0.5rem 0;
+    margin: 0.1rem 0.5rem;
   }
 }

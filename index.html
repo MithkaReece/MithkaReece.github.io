@@ -1,263 +1,371 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <link rel="stylesheet" type="text/css" href="index.css">
-      <link rel="stylesheet" type="text/css" href="navbar.css">
-      <link rel="stylesheet" type="text/css" href="footer.css">
-    </head>
-    <body>
-      <nav class="navbar">
-        <h2 class="navbar-header">Reece Waite</h2>
-        <ul class="navbar-links">
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="cv.html">CV</a></li>
-        </ul>
-      </nav>
-
-      <div class="spacer"></div>
-
-      <section class="banner">
-        <h1>Portfolio</h1>
-      </section>
-
-      <div class="grid-container">
-        <div class="flex-grid">
-
-
-          <div class = "image-card">
-            <a class="image-link" href="Projects/farming.html"></a>
-              <img class="card-image" src="Assets/Farming.png">
-              <div class="overlay">
-                <h2>Farming Game</h2>
-                <p> I am currently developing a farming game using and learning Rust as well as the Bevy game engine. My goals are to learn rust, chunk loading and ai systems.
-                  Bevy like EnTT in C++ follow the ECS system which will make running many entities a lot more efficient.
-                </p>
-                <h2>2023-Current</h2>
-              </div>
-            </a>
-
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/Farming-Bevy">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(247,76,0)">Rust</div>
-              <div style="background-color:  rgb(40, 40, 40); color: white">Bevy</div>
-            </div>
-          </div>
-
-          <div class = "image-card">
-            <a class="image-link" href="Projects/2.5D.html"></a>
-              <img class="card-image" src="Assets/25D.png">
-              <div class="overlay">
-                <h2>2.5D Game</h2>
-                <p> I wanted to make something using custom physics so I decided to attempt making a jumping physics that works in a 
-                  topdown game but treats the collisions like a 3D world.
-                </p>
-                <h2>2023-Current</h2>
-              </div>
-            </a>
-
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/2.5D">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(65, 21, 149)">C#</div>
-              <div style="background-color:  rgb(84, 84, 84)">Unity</div>
-            </div>
-          </div>
-
-          <div class = "image-card">
-            <a class="image-link" href="Projects/asteroids2.html"></a>
-              <img class="card-image" src="Assets/Asteroids2.png">
-              <div class="overlay">
-                <h2>Asteroids C++</h2>
-                <p> I developed the iconic Asteroids game using C++ as a way to enhance my C++ skills and grasp the ECS game design 
-                  pattern by using the EnTT library. Additionally, I used SFML for rendering the 2D visuals. 
-                  The game encompasses the well-known Asteroids gameplay, accompanied by features like a pause menu, main menu 
-                  and the ability to save highscores.</p>
-                <h2>2023-Current</h2>
-              </div>
-            </a>
-
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/Asteroids-CPP">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(1, 87, 152)">C++</div>
-              <div style="background-color:  rgb(33, 33, 33); color: white">Entt</div>
-              <div style="background-color: rgb(114, 175, 41)">SFML</div>
-            </div>
-          </div>
-
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/juniorProgrammer.html"></a>
-              <img class="card-image"  src="Assets/JuniorProgrammer.png">
-              <div class="overlay">
-                <h2>Junior Programmer Unity Course</h2>
-                <p>During this course my aim was to ensure a strong foundation in game development while also gaining greater 
-                  comfort with a game engine such as Unity.</p>
-                <h2>Summer 2023</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/Unity-Create-with-Code">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(65, 21, 149)">C#</div>
-              <div style="background-color: rgb(84, 84, 84)">Unity</div>
-              <div style="background-color: rgb(21, 255, 0); color:black"">Playable</div>
-            </div>
-          </div>
-          
-
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/rogue-like.html"></a>
-              <img class="card-image"  src="Assets/Rogue-Like.png">
-              <div class="overlay">
-                <h2>Rogue-Like Game</h2>
-                <p>I aimed to undertake a more extensive project in Unity to delve deeper into the software's capabilities, 
-                  including combat game logic, interchangeable weapons sprites, animations and use of an event system. 
-                  As part of this ongoing endeavor, I am actively engaged in refining aspects like dungeon generation, inventory management, 
-                  particle and sound effects and optimization techniques.</p>
-                <h2>Summer 2022 & Current</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/Rogue-Like">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(65, 21, 149)">C#</div>
-              <div style="background-color: rgb(84, 84, 84)">Unity</div>
-            </div>
-          </div>
-
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/aoe.html"></a>
-              <img class="card-image"  src="Assets/AOE.png">
-              <div class="overlay">
-                <h2>Age Of Empires</h2>
-                <p>My goal was to recreate Age of Empires: The Age of Kings, driven by a desire to delve into UI design, 
-                  mouse controls, resource management and the mechanics of creating structures and units.</p>
-                <h2>September 2020</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/Age-Of-Empires">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-              <div style="background-color: rgb(238, 40, 99)">P5</div>
-              <div style="background-color: rgb(21, 255, 0); color:black"">Playable</div>
-            </div>
-          </div>
-
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/durjam.html"></a>
-              <img class="card-image"  src="Assets/DurJam.png">
-              <div class="overlay">
-                <h2>DurJam Re-Sources</h2>
-                <p>
-                  In the span of a four-day DurJam event, our team of four embarked on creating a survival resource collection game, 
-                  drawing inspiration from titles like Terraria and Oxygen Not Included. The core concept involved traversing between 
-                  compact planets, each brimming with diverse resources.</p>
-                <h2>August 2020</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/Re-Sources">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-              <div style="background-color: rgb(238, 40, 99)">P5</div>
-              <div style="background-color: rgb(21, 255, 0); color:black"">Playable</div>
-            </div>
-          </div>
-      
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/uno.html"></a>
-              <img class="card-image"  src="Assets/Uno1.png">
-              <div class="overlay">
-                <h2>Uno Game</h2>
-                <p>
-                  I aimed to replicate the timeless UNO card game, primarily to enjoy it with my friends during COVID lockdown. 
-                  This endeavor provided an excellent opportunity for me to delve into the intricacies of multiplayer game logic. 
-                  For this purpose, I opted for Socket.IO, appreciating its swift functionality and straightforward player tracking capabilities 
-                  as well as working in web allowing friends to easily join via a browser link.</p>
-                <h2>Late Spring 2020</h2>
-              </div>
-            <div class="tags">
-              <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-              <div style="background-color: rgb(255, 255, 255); color:rgb(0, 0, 0)">SocketIO</div>
-              <div style="background-color: rgb(218, 53, 16)">HTML</div>
-              <div style="background-color: rgb(8, 112, 194)">CSS</div>
-            </div>
-          </div>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="navbar.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<link rel="stylesheet" type="text/css" href="tags.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-left">
+    <a class="navbar-header">Reece Waite</a>
+    <div class="navbar-icons">
+      <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+        <img src="Assets/email-icon-navbar.png" class="email-icon"></a>
+      <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+        <img src="Assets/github-logo-navbar.png" class="github-icon"></a>
+        <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+          <img src="Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+    </div>
+  </div>
  
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/monsterMaze.html"></a>
-              <img class="card-image"  src="Assets/MonsterMaze1.png">
-              <div class="overlay">
-                <h2>Monster Maze</h2>
-                <p>I aimed to apply the mathematical concepts I learned in my A Level Mathematics to create 3D graphics, 
-                  avoiding external resources to personally experience the challenges inherent in rendering such graphics. 
-                  Subsequently, I gained insights into the methodologies modern software employs for 3D rendering, a knowledge 
-                  enriched by my third-year Graphics module.</p>
-                <h2>Early Spring 2020</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/MonsterMaze">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-              <div style="background-color: rgb(238, 40, 99)">P5</div>
-              <div style="background-color: rgb(21, 255, 0); color:black"">Playable</div>
-            </div>
-          </div>
-              
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/asteroids.html"></a>
-              <img class="card-image"  src="Assets/Asteroids.png">
-              <div class="overlay">
-                <h2>Asteroids JS</h2>
-                <p>My first attempt at recreating the classic Asteroids game. This was my attempt at a larger game bigger than snake, connect 
-                  four, tictactoe or chess.</p>
-                <h2>Christmas 2019</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/asteroids">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-              <div style="background-color: rgb(238, 40, 99)">P5</div>
-              <div style="background-color: rgb(21, 255, 0); color:black"">Playable</div>
-            </div>
-          </div>
-                  
-          <div class = "image-card">
-            <a class="image-link"  href="Projects/snake.html"></a>
-              <img class="card-image"  src="Assets/Snake.png">
-              <div class="overlay">
-                <h2>Snake Algorithm</h2>
-                <p>I recreated the classic Snake game, enabling user control and then integrated a pathfinding algorithm 
-                  to govern the movements of the snake player.</p>
-                <h2>Late 2019</h2>
-              </div>
-            <div class="tags">
-              <a href="https://github.com/MithkaReece/snake-algorithm">
-                <img src="Assets/github-logo.png" class="image-tag">
-              </a>
-              <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-              <div style="background-color: rgb(238, 40, 99)">P5</div>
-              <div style="background-color: rgb(21, 255, 0); color:black"">Playable</div>
-            </div>
-          </div>
-          
+  <ul class="navbar-links">
+    <li><a class="active" href="">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
 
-        </div>
+<!-- <div class="spacer"></div> -->
+
+<section class="banner">
+  <h1>Portfolio</h1>
+  <div class="banner-line"></div>
+</section>
+<div class="Home-Page">
+  <h2>Highlighted Projects</h2>
+  <div class="flex-grid">
+    <div class = "image-card">
+      <a class="image-link" href="Projects/farming.html">
+        <img class="card-image" src="Assets/Farming2.png"></a>
+      <div class="title-bar"><h2>Farming Game</h2></div>
+
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Farming-Bevy" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(247,76,0)">Rust</div>
+        <div style="background-color:  rgb(40, 40, 40); color: white">Bevy</div>
+        <div style="background-color: rgb(59, 7, 182)">Chunk Loading</div>
+        <div style="background-color: rgb(0, 78, 247)">Tilemap</div>
+        <div style="background-color: rgb(17, 156, 12)">AI</div>
+      </div>
+      <ul>
+        <li>Leverage Rust to enhance C++ skills</li>
+        <li>Utilize Bevy's advanced ECS framework</li>
+        <li>Implement Chunk Loading</li>
+        <li>Implement AI behaviour tree (TODO)</li>
+        <li>Implement Pathfinding (TODO)</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link" href="Projects/2.5D.html">
+        <img class="card-image" src="Assets/25D.png"></a>
+      </a>
+      <div class="title-bar"><h2>2.5D Jumping Game</h2></div>
+
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/2.5D" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(65, 21, 149)">C#</div>
+        <div style="background-color:  rgb(84, 84, 84)">Unity</div>
+        <div style="background-color:  rgb(29, 13, 173)">Animations</div>
+        <div style="background-color:  rgb(173, 13, 13)">Custom Physics</div>
       </div>
 
-      <footer class="bottom-banner">
-        <div class="links">
-          <a href="mailto:reece.waite1@gmail.com">Email</a>
-          <a href="https://github.com/MithkaReece">GitHub</a>
-          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
-        </div>
-      </footer>
-    </body>
+      <ul>
+        <li>Implemented custom 2.5D jumping physics</li>
+        <li>Developed an animation state system using a code-based approach with events</li>
+        <li>Plan to implement custom 2.5D lighting (TODO)</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link" href="Projects/asteroids2.html">
+        <img class="card-image" src="Assets/AsteroidsCPP2.png"></a>
+      <div class="title-bar"><h2>Asteroids Remake</h2></div>
+
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Asteroids-CPP" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(1, 87, 152)">C++</div>
+        <div style="background-color:  rgb(33, 33, 33); color: white">Entt</div>
+        <div style="background-color: rgb(114, 175, 41)">SFML</div>
+        <div style="background-color: rgb(190, 24, 182)">Scene Management</div>
+      </div>
+
+      <ul>
+        <li>Developed my first game in C++</li>
+        <li>Implemented custom scene management for ECS using EnTT</li>
+        <li>Designed a pausing scene mechanic</li>
+        <li>Implemented an event system to resolve circular dependencies and achieve general decoupling</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/combat.html">
+        <img class="card-image"  src="Assets/Rogue-Like.png"></a>
+      <div class="title-bar"><h2>Combat Game</h2></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Rogue-Like" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(65, 21, 149)">C#</div>
+        <div style="background-color: rgb(84, 84, 84)">Unity</div>
+        <div style="background-color: rgb(172, 18, 18)">Animations</div>
+        <div style="background-color: rgb(33, 197, 129)">Combat</div>
+      </div>
+
+      <ul>
+        <li>My first substantial Unity project</li>
+        <li>Iterated on the animation system multiple times</li>
+        <li>Developed a Combat Event and State Machine system</li>
+        <li>Designed a stylized UI featuring health and poise rings</li>
+      </ul>
+    </div>
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/uno.html">
+        <img class="card-image"  src="Assets/Uno1.png"></a>
+        <div class="title-bar"><h2>Uno Multiplayer</h2></div>
+      <div class="tags">
+        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+        <div style="background-color: rgb(255, 255, 255); color:rgb(0, 0, 0)">SocketIO</div>
+        <div style="background-color: rgb(218, 53, 16)">Multiplayer</div>
+        <div style="background-color: rgb(8, 112, 194)">Anti-cheat</div>
+      </div>
+
+      <ul>
+        <li>Implemented multiplayer functionality using WebSockets to maintain persistent connections</li>
+        <li>Established server-side verification alongside client-preemptive actions</li>
+        <li>Managed socket connections and synchronized game state between clients and the server</li>
+        <li>Designed a lobby system to facilitate game setup before starting matches</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/monsterMaze.html">
+        <img class="card-image"  src="Assets/MonsterMaze1.png"></a>
+        <div class="title-bar"><h2>A Level Coursework</h2><h2>Monster Maze</h2><h3>(Playable)</h3></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/MonsterMaze" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+        <div style="background-color: rgb(238, 40, 99)">P5</div>
+        <div style="background-color: rgb(8, 112, 194)">Graphics</div>
+        <div style="background-color: rgb(8, 194, 33)">Collision</div>
+        <div style="background-color: rgb(135, 8, 194)">Pausing</div>
+      </div>
+
+      <ul>
+        <li>Created custom 3D graphics using mathematical concepts learned during A-levels</li>
+        <li>Optimized collision detection with a quad-tree data structure</li>
+        <li>Implemented maze generation</li>
+        <li>Designed a heads-up display (HUD) and a pause menu</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2>Personal Projects</h2>
+
+  <div class="flex-grid">
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/ballCollector.html">
+      <img class="card-image"  src="Games/BallCollector/Preview.png"></a>
+      <div class="title-bar"><h2>Ball Collector Game</h2><h3>(Playable)</h3></div>
+
+      <div class="tags">
+          <a href="https://github.com/MithkaReece/Ball-Collector" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(65, 21, 149)">C#</div>
+        <div style="background-color: rgb(84, 84, 84)">Unity</div>
+        <div style="background-color: rgb(226, 6, 6)">Mobile</div>
+      </div>
+
+      <ul>
+        <li>Random generation of levels based on selected difficulty</li>
+        <li>Mobile scaling resolution with touch controls</li>
+        <li>Scoring based on type of ball caught in the moving bucket</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/graphics.html">
+      <img class="card-image"  src="Assets/Graphics.png"></a>
+      <div class="title-bar"><h2>Graphics Module</h2></div>
+
+      <div class="tags">
+        <div style="background-color: rgb(240, 220, 86); color:black">ThreeJS</div>
+        <div style="background-color: rgb(243, 14, 14)">WebGL</div>
+        <div style="background-color: rgb(21, 33, 150)">Models</div>
+        <div style="background-color: rgb(21, 150, 27)">Lighting</div>
+      </div>
+
+      <ul>
+        <li>Applied WebGL in my third-year Graphics module</li>
+        <li>Imported 3D models from Blender</li>
+        <li>Applied texture and normal maps to objects</li>
+        <li>Implemented directional, spot and hemispherical lighting</li>
+        <li>Generated a maze with two types of levels</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/aoe.html">
+        <img class="card-image"  src="Assets/AOE.png"></a>
+        <div class="title-bar"><h2>Age of Empires Remake</h2><h3>(Playable)</h3></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Age-Of-Empires" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(240, 220, 86); color:black">JS</div>
+        <div style="background-color: rgb(238, 40, 99)">P5</div>
+        <div style="background-color: rgb(53, 40, 238)">Tilebased</div>
+        <div style="background-color: rgb(201, 103, 11)">Local Multiplayer</div>
+      </div>
+
+      <ul>
+        <li>Developed my first custom tilemap system, featuring an interactable layer</li>
+        <li>Highlighted available movement options, calculated based on the movement speed of various types of tiles</li>
+        <li>Implemented resource collection and spending mechanics</li>
+        <li>Created a turn-based local multiplayer experience</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/durjam.html">
+        <img class="card-image"  src="Assets/DurJam.png"></a>
+      <div class="title-bar"><h2>DurJam Submission</h2><h3>(Playable)</h3></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Re-Sources" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+        <div style="background-color: rgb(238, 40, 99)">P5</div>
+        <div style="background-color: rgb(25, 180, 219)">Custom Gravity</div>
+        <div style="background-color: rgb(25, 219, 51)">Teamwork</div>
+      </div>
+
+      <ul>
+        <li>First group project showing importance of version control</li>
+        <li>First encounter of scope creep and priortising core features </li>
+        <li>Custom physics (gravity rotates as you walk round the square planet)</li>
+        <li>Resource collection from breaking tiles</li>
+        <li>Team communication including non-programmer members</li>
+      </ul>
+    </div>
+
+
+        
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/asteroids.html">
+        <img class="card-image"  src="Assets/Asteroids.png"></a>
+      <div class="title-bar"><h2>Asteroids JS Prototype</h2><h3>(Playable)</h3></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/asteroids" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+        <div style="background-color: rgb(238, 40, 99)">P5</div>
+        <div style="background-color: rgb(135, 8, 194)">OOP</div>
+        <div style="background-color: rgb(121, 153, 5)">Particle Effects</div>
+      </div>
+      <ul>
+        <li>Developed my first larger game project</li>
+        <li>Utilized object-oriented programming (OOP) for game object separation</li>
+        <li>Created a quick JavaScript prototype for the game</li>
+        <li>Implemented custom particle effects</li>
+      </ul>
+    </div>
+            
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/snake.html">
+        <img class="card-image"  src="Assets/Snake.png"></a>
+        <div class="title-bar"><h2>Snake Algorithm</h2><h3>(Playable)</h3></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/snake-algorithm" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+        <div style="background-color: rgb(238, 40, 99)">P5</div>
+        <div style="background-color: rgb(135, 8, 194)">Collsions</div>
+        <div style="background-color: rgb(8, 194, 163)">AI</div>
+      </div>
+      <ul>
+        <li>Implemented an AI algorithm to play Snake</li>
+        <li>Utilized a queue data structure for efficient snake mechanics</li>
+        <li>Developed a collision system</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <h2>Courses</h2>
+  <div class="flex-grid">
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/cooking.html"> 
+        <img class="card-image"  src="Games/CookingGame/Preview.png"></a>
+      <div class="title-bar"><h2>Code Monkey's</h2><h2>Cooking Game Course</h2><h3>(Playable)</h3></div>
+
+      <div class="tags">
+           <a href="https://github.com/MithkaReece/Cooking-Game" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(65, 21, 149)">C#</div>
+        <div style="background-color: rgb(84, 84, 84)">Unity</div>
+        <div style="background-color: rgb(21, 33, 150)">UI</div>
+        <div style="background-color: rgb(172, 18, 18)">Special Effects</div>
+      </div>
+
+      <ul>
+        <li>Reinforced game development foundations</li>
+        <li>Implemented multiplatform support (Web, Phone, Controller)</li>
+        <li>Expanded the user interface (UI)</li>
+        <li>Incorporated additional sound and particle effects</li>
+        <li>Utilized scriptable objects for managing static data</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/juniorProgrammer.html"> 
+        <img class="card-image"  src="Assets/JuniorProgrammer.png"></a>
+      <div class="title-bar"><h2>Unity's</h2><h2>Junior Programmer Pathway</h2><h3>(Playable)</h3></div>
+
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Unity-Create-with-Code" target="_blank">
+          <img src="Assets/github-logo.png" class="github-tag">
+        </a>
+        <div style="background-color: rgb(65, 21, 149)">C#</div>
+        <div style="background-color: rgb(84, 84, 84)">Unity</div>
+        <div style="background-color: rgb(21, 33, 150)">UI</div>
+        <div style="background-color: rgb(172, 18, 18)">Special Effects</div>
+      </div>
+
+      <ul>
+        <li>Reinforced game development foundations</li>
+        <li>Implemented multiplatform support (Web, Phone, Controller)</li>
+        <li>Expanded the user interface (UI)</li>
+        <li>Incorporated additional sound and particle effects</li>
+        <li>Utilized scriptable objects for managing static data</li>
+      </ul>
+    </div>
+    
+    
+  </div>
+
+</div>
+
+<footer class="bottom-banner"><div class="links">
+  <a href="mailto:reece.waite1@gmail.com">Email</a>
+  <a href="https://github.com/MithkaReece" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/reece-waite" target="_blank">LinkedIn</a>
+</div></footer>
+</body>
 </html>

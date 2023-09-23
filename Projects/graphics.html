@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Graphics-Module</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <a class="arrow left-arrow" href="ballCollector.html">
+        <span class="arrow-text">Ball Collector</span>
+      </a>
+      <a class="arrow right-arrow" href="aoe.html">
+        <span class="arrow-text">Age of Empires</span>
+      </a>
+
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Graphics Module</h1>
+          <h3 class="date">Winter 2022</h3>
+          <p>
+            This coursework for my graphics module focused on using WebGL techniques 
+            rather than creating a unique game. That's why I used another random maze game with raycast collisions.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/5EljV6eT6eU" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <div style="background-color: rgb(240, 220, 86); color:black">ThreeJS</div>
+            <div style="background-color: rgb(243, 14, 14)">WebGL</div>
+            <div style="background-color: rgb(21, 33, 150)">Models</div>
+            <div style="background-color: rgb(21, 150, 27)">Lighting</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Textures:</b> Unlike my monster maze, using WebGL allowed me to map textures onto faces of 3D objects. 
+              Additionally, normal maps were applied to the textures, which helped the lighting calculate the roughness 
+              of a surface to imitate non-flat surfaces.
+            </li>
+            <li><b>Lighting:</b> For the first level, I used a directional light to imitate the sun. In the second level, instead 
+              of a directional light, I aimed to imitate nighttime. I incorporated low ambient lighting, a torch spotlight in the 
+              direction the player was looking, and occasional hemisphere-colored lights to help distinguish areas you've visited 
+              before, as the second maze is larger than the first.
+            </li>
+            <li><b>Camera:</b> 
+              In the first level, you have a mouse-controllable viewpoint. In the second level, there is a first-person perspective 
+              with a spotlight featuring a torch model. The angle of the spotlight changes as you look around, with a limited 
+              vertical field of view (FOV) angle.
+            </li>
+            <li><b>Blender Model:</b> The first time I used Blender, I created something not too complex, which is why I chose to 
+              model a torch. I then exported this as a GLB file, as Three.js is capable of importing this format.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p>
+            The most challenging part was using imported assets such as textures and my Blender 
+            model because it is very difficult to debug when the result is either present or not.
+          </p>
+        </section>
+      </div>
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

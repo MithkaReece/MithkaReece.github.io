@@ -4,80 +4,114 @@
       <link rel="stylesheet" type="text/css" href="../project.css">
       <link rel="stylesheet" type="text/css" href="../navbar.css">
       <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
     </head>
     <body>
       <nav class="navbar">
-        <h2 class="navbar-header">Reece Waite</h2>
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
         <ul class="navbar-links">
+          <li><a class="active" href="">Farming-Game</a></li>
           <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
           <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
-      <a class="arrow left-arrow" href="snake.html">
-        <span class="arrow-text">Snake</span>
+
+      <a class="arrow left-arrow" href="juniorProgrammer.html">
+        <span class="arrow-text">Junior Pathway Course</span>
       </a>
       <a class="arrow right-arrow" href="2.5D.html">
         <span class="arrow-text">2.5D Game</span>
       </a>
 
+
       <div class="main">
-        <h1 class="project-title">Farming Game</h1>
-        <section class="section2">
-          <img class="project-image" src="../Assets/Farming.png"  >
-          <div class="tags">
-            <div style="background-color: rgb(247,76,0)">Rust</div>
-            <div style="background-color: rgb(40, 40, 40)">Bevy</div>
-            <div style="background-color: rgb(60, 131, 3)">Tilemap</div>
-            <div style="background-color: rgb(41, 3, 131)">Chunk Loading</div>
-            <div style="background-color: rgb(3, 101, 131)">AI</div>
-            <div style="background-color: rgb(80, 3, 131)">Resource System</div>
+        <section class="project-section">
+          <h1 class="project-title">Farming Game</h1>
+          <h3 class="date">Autumn 2023</h3>
+          <p>In this project, my primary goal was to learn Rust and gain the ability to apply its advantages when working 
+            with C++ in the future. I opted for the Bevy game engine as I aimed to explore a more comprehensive implementation 
+            of the Entity-Component-System (ECS) architecture. Additionally, in this project, I aimed to delve into complex AI 
+            and optimizations, including techniques like chunk loading.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/qjJsXxPgG8k" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+      
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+      
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
           </div>
-          <section>
-            <h3>Development - September-Current 2023</h3>
-            <p>I set out to learn more about rust but also to refine my game development skills. I can already see the similarities 
-              between programming ECS in C++ and Rust Bevy and the conventions are very similar. Understanding how C++ features 
-              try and handle memory has made it easy to understand how Rust essentially use these practices by default. For example 
-              giving something with memory will automatically move the data as opposed to C++ where you would need std::move().
-              </p><p>
-                So far I have successfully implemented a chunk loading systems to allow for large tilemap. I then had to readapt, 
-                my previous features which consisted of hoeing ground, planting seeds, plants going in stages and then being able 
-                to harvest the plant.</p>
-         </section>
-       
 
-        <h3 class="section-title">Chunk Loading</h3>
-        <section class="section2">
-          <iframe width="984" height="722" src="https://www.youtube.com/embed/sS_EwOm1qj0" frameborder="0" allowfullscreen class="project-video"></iframe>
-          <p>
-            Chunk loading is achieved using a custom tilemap separated out into chunks which hold the tiles for that particular chunk. 
-            Chunks have a load in distance and load out distance from the player, these values are different to prevent 
-            chunks being loaded in an out when moving a little near the loading boarder. Loading consists of creating visual entities for 
-            unloaded tiles and saving these entities in a map. The tile data is then synced with the visual entities. 
-            The map comes in very useful when unloading as the chunk is used as a key in the map to retrieve all entities in the chunk 
-            that can then be despawned.
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Farming-Bevy" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(247,76,0)">Rust</div>
+            <div style="background-color:  rgb(40, 40, 40); color: white">Bevy</div>
+            <div style="background-color: rgb(59, 7, 182)">Chunk Loading</div>
+            <div style="background-color: rgb(0, 78, 247)">Tilemap</div>
+            <div style="background-color: rgb(17, 156, 12)">AI</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Tilemap and Chunk Loading:</b> 
+              I integrated a tilemap system and chunk loading mechanism, enabling efficient performance over a large tilemap world.
+            </li>
+            <li><b>Crop System:</b> I designed and implemented a sophisticated crop system that supports various aspects of farming, 
+              including seed planting, crop growth, and harvesting. Currently, the crops are automatically sold for money, but they 
+              will also serve the purpose of feeding animals in the future.
+            </li>
+            <li><b>Animal Behaviour AI:</b> Currently, animals move using a simple steering system that directs them toward randomly
+               selected nearby targets. In the future, the AI will be overhauled to operate on a behaviour tree, and the AI will employ
+                a more sophisticated pathfinding approach, most likely using A* with custom heuristics.
+            </li>
+            <li><b>Resource Management (TODO):</b> I implemented an inventory system for the player, enabling the collection of crop and 
+              animal produce. This system allows the player to decide what to do with these items. The game follows a simple resource loop, 
+              where players can sell their produce and use the proceeds to acquire more capabilities for producing items.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p>To enable chunk loading while separating entity visuals from the tilemap, I faced the challenge of storing all data within the 
+            tilemap while accommodating various types of plants. To address this, I leveraged Rust's enums, which not only facilitated 
+            straightforward comparisons of tile types but also enabled the storage of structs. These enums allowed for the storage of 
+            additional data specific to different tile objects.
           </p>
+          <h2>Trello</h2>
+          <img style="width: 100%;" src="../Assets/FarmingTrello.png"  >
+          <!-- <h2>Maybe code samples</h2> -->
         </section>
-     
-
-        <h3 class="section-title">Animal AI</h3>
-        <section class="section2">
-          <iframe width="984" height="722" src="https://www.youtube.com/embed/VzRG0dbtu60" frameborder="0" allowfullscreen class="project-video"></iframe>
-          <p>
-            My goal is to mimic animal movement behaviour, for the sheep movement I pick a random close location within a distance, 
-            lets call it a target, then the sheep moves towards this target and then generated another target from that spot. This 
-            generally keeps the sheep moving random but around the area it started in. To improve this I would also like to add a 
-            state machine to the sheep which allows the sheep to sometimes stop moving as animals do not constantly move. Further, 
-            improvement would be to integrate some kind of flocking behaviour that uses data of animals around it to decide it motion.
-          </p>
-        </section>
-
-      </section>
       </div>
-      </div>
+
+
 
       <footer class="bottom-banner">
         <div class="links">
-          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
           <a href="https://github.com/MithkaReece">GitHub</a>
           <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
         </div>

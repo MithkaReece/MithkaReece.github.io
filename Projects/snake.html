@@ -4,72 +4,113 @@
       <link rel="stylesheet" type="text/css" href="../project.css">
       <link rel="stylesheet" type="text/css" href="../navbar.css">
       <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
     </head>
     <body>
       <nav class="navbar">
-        <h2 class="navbar-header">Reece Waite</h2>
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
         <ul class="navbar-links">
+          <li><a class="active" href="">Snake</a></li>
           <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
           <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
+
 
       <a class="arrow left-arrow" href="asteroids.html">
         <span class="arrow-text">Asteroids JS</span>
       </a>
-      <a class="arrow right-arrow" href="farming.html">
-        <span class="arrow-text">Farming</span>
+      <a class="arrow right-arrow" href="cooking.html">
+        <span class="arrow-text">Cooking Game Course</span>
       </a>
 
       <div class="main">
-        <h1 class="project-title">Snake Algorithm</h1>
-        <div class="section2">
-          <img class="project-image" src="../Assets/Snake.png" >
-          <div class="tags">
-            <div style="background-color: rgb(16, 3, 131)">2D</div>
-            <div style="background-color: rgb(218, 53, 16)">Pathfinding</div>
-            <div style="background-color: rgb(223, 106, 11)">Queues</div>
-            <div style="background-color: rgb(3, 131, 56)">User Input</div>
+        <section class="project-section">
+          <h1 class="project-title">Snake Algorithm</h1>
+          <h3 class="date">Autumn 2019</h3>
+          <p>
+            I recreated the classic Snake game, allowing user control, and then integrated a pathfinding 
+            algorithm to govern the movements of the snake player.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/6spB288_DbQ" frameborder="0" allowfullscreen></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
           </div>
-          <section>
-            <h3>Development - March 2019</h3>
-            <p>The project commenced with my recreation of the classic game Snake, with 
-              a key focus on implementing an efficient snake movement and collision system. I achieved this 
-              by utilizing a queue structure composed of points to represent the snake's body. Each movement 
-              update would add a new head point to the front of the queue while simultaneously removing the 
-              tail end point. In instances where the snake consumed food, this sequence of tail removal would 
-              skip one step, effectively lengthening the snake.
-              </p><p>
-              Collision detection was optimized to inspect only the square where the next head was projected 
-              to be. This process involved assessing whether this square was either out of bounds or a part 
-              of the snake's body.
-              </p><p>
-              Beyond manual gameplay, I was intrigued by experimenting with various algorithms for controlling 
-              the snake. One approach involved a basic yet effective strategy of systematically spanning rows 
-              of the grid, leaving one space unoccupied. While this technique yielded the best results, 
-              it was relatively slow. On the other hand, I devised an algorithm that would pathfind towards 
-              the food, circumnavigating the snake's tail, all within the shortest number of steps. This 
-              approach notably enabled the snake to swiftly reach the food and expand in length, but its 
-              susceptibility to self-trapping posed a challenge.
-              </p><p>
-              This project underscored the delicate balance between optimal gameplay strategies and potential 
-              pitfalls, offering insights into the complexities of algorithmic decision-making and game mechanics.</p>
-          </section>
-        </div>
 
-        <h3 class="section-title">Algorithm In Action</h3>
-        <div class="section2">
-          <iframe width="300%" height="500" src="https://www.youtube.com/embed/6spB288_DbQ" frameborder="0" allowfullscreen></iframe>
-        </div>
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/snake-algorithm" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+            <div style="background-color: rgb(238, 40, 99)">P5</div>
+            <div style="background-color: rgb(135, 8, 194)">Collsions</div>
+            <div style="background-color: rgb(8, 194, 163)">AI</div>
+          </div>
 
-        <div class="gameContainer"></div>
-        <h3 class="section-title">Embedded Game</h3>
-        <div class="button-container">
-          <button class="loadGameButton">Load/Reload Game</button>
-          <button class="unloadGameButton">Unload Game</button>
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>User Control:</b> Originally, this Snake game allowed users to control the snake by changing its direction. 
+              The embedded game below is the version with user controls enabled.
+            </li>
+            <li><b>Algorithms:</b> The algorithm demonstrated finds the shortest current route to the food while maneuvering around 
+              its own tail. However, this method requires recalculating the route with each move as the tail moves. It can still result 
+              in collisions with the tail, especially when the tail is long enough and already positioned around the next food.
+
+              Another, albeit less dynamic, algorithm that effectively solves the problem involves moving along each row one by one, 
+              leaving a single column free to loop back. While this approach can lead to achieving the longest possible snake, it 
+              may not be suitable for more complex scenarios.
+            </li>
+            <li><b>Queue Structure:</b> 
+              To smoothly extend the snake when food is eaten, a block is enqueued to the snake. While this may not be the 
+              fastest implementation, it was straightforward to set up and served well for a quick prototype.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> 
+            My primary challenge was pathfinding around the snake's tail. However, this problem becomes significantly easier if
+            you approximate the tail using a fixed grid and pathfind around it. To further enhance this approach, I would consider 
+            caching distances to food within the grid and updating the grid based on the new gap created by the end of the tail. 
+            This would allow for the recalculation of information only as necessary.
+          </p>
+        </section>
+
+        <div class="game-container">
+          <h3 class="section-title">Embedded Game</h3>
+          <div class="button-container">
+            <button class="loadGameButton">Load/Reload Game</button>
+            <button class="unloadGameButton">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Assets/Snake.png" alt="Placeholder Image" width="1000" height=auto>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
         </div>
-        <img class="placeholder-image" src="../Assets/Snake.png" alt="Placeholder Image" width="1000" height=auto>
-        <iframe class="game" width="1000" height="0" hidden></iframe>
 
         <script>
           const gameFrame = document.querySelector(".game");
@@ -101,7 +142,7 @@
 
       <footer class="bottom-banner">
         <div class="links">
-          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
           <a href="https://github.com/MithkaReece">GitHub</a>
           <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
         </div>

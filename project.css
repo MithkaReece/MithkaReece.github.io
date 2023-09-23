@@ -7,8 +7,7 @@ body {
 }
 
 .main {
-  background-color: rgb(20, 20, 20);
-  margin-top: 7rem;
+  background-color: rgb(27, 27, 27);
   padding: 2rem 8rem;
   flex: 1; /* Allow main content to take up remaining vertical space */
   display: flex;
@@ -17,26 +16,65 @@ body {
   justify-content: flex-start; /* Align content at the top */
 }
 
-p {
+.project-section {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-section p {
   font-size: 1.5rem;
 }
 
-h3 {
+.project-section li {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-section h1 {
+  user-select: none;
+  padding:0;
+  margin-top:0;
+  margin-bottom: 0.5rem;
+}
+
+.project-section h2 {
+  user-select: none;
   font-size: 3rem;
 }
 
+.project-section h3 {
+  user-select: none;
+  padding:0;
+  margin:0;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.397);
+  font-size: 3vh;
+}
 
 .project-title {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding: 0;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; 
+}
+
+
 .section1 {
   display:flex;
   gap: 2rem;
-
 }
 
 .project-image {
@@ -66,29 +104,14 @@ h3 {
   justify-content: space-around;  
 }
 
-.project-video {
-  width: 70%;
-  margin-top: 0;
+
+ul {
+  padding-left:1rem;
 }
+
 
 .section2 section {
   width: 90%;
-}
-
-.tags {
-  display: flex;
-  gap: 1rem;
-  text-decoration: none;
-}
-
-.tags div {
-  background-color: brown;
-  padding: 0.2rem 0.4rem;
-  border-radius: 5px;
-  margin: 0 0;
-  display: inline-block;
-  color: white;
-  font-size: 1rem;
 }
 
 .section-title {
@@ -97,12 +120,12 @@ h3 {
   font-size: 5rem;
 }
 
-.game-containter {
+.game-container {
+  user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  text-align: center;
+  justify-content: center;
 }
 
 .button-container {
@@ -211,11 +234,63 @@ h3 {
   transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1.0); 
 }
 
+@media (max-width: 768px) {
+  .left-arrow, 
+  .right-arrow {
+    display: none;
+  }
+}
+
+
+.tags {
+  padding-top: 0.8rem;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.tags div {
+  background-color: rgb(27,27,27);
+  padding: 0.3vw 0.5rem;
+  border-radius: 5px;
+  margin: 0.8rem 0;
+  display: inline-block;
+  color: white;
+  font-size: 2vw;
+  /* height:2.1rem */
+}
+
+.github-tag {
+  background-color: rgb(95, 24, 102);
+  height: 3.5vw;
+  width:auto;
+  margin-top: 0.5rem;
+  margin-right: 0rem;
+}
+
+@media (max-width: 768px) {
+  .github-tag {
+    height: 4rem;
+  }
+
+  .tags div {
+    font-size: 1.5rem;
+  }
+}
+
+.tags a:hover .github-tag{
+  background-color:rgb(192, 2, 192);
+}
+
+
 /* Styles for screens with a maximum width of 768px (typical mobile devices) */
 @media (max-width: 768px) {
   .main {
-    margin-top: 10rem; /* Reduce top margin for mobile */
-    padding: 2rem 8rem;
+    padding: 2rem 0rem;
   }
 
   p {
@@ -224,54 +299,6 @@ h3 {
 
   h3 {
     font-size: 3rem;
-  }
-
-  .project-title {
-    font-size: 4rem; /* Reduce font size for mobile */
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .section1 {
-    display: block; /* Change to block display for mobile */
-  }
-
-  .project-image {
-    width: 100%; /* Make images full width for mobile */
-    margin-top: 1rem;
-  }
-
-  .description {
-    font-size: 1rem; /* Reduce font size for mobile */
-  }
-
-  .section-title {
-    font-size: 1.5rem; /* Reduce font size for mobile */
-    margin-top: 1rem;
-  }
-
-  .section2 {
-    display: block; /* Change to block display for mobile */
-    text-align: center;
-  }
-
-  .project-video {
-    width: 100%; /* Make video full width for mobile */
-    margin-top: 1rem;
-  }
-
-  .section2 section {
-    width: 100%; /* Make sections full width for mobile */
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap; /* Allow tags to wrap for mobile */
-    gap: 0.5rem;
-  }
-
-  .tags div {
-    font-size: 0.8rem; /* Reduce font size for mobile */
   }
 
   .section-title {

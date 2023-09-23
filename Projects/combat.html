@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Combat-Game</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+ 
+
+      <a class="arrow left-arrow" href="asteroids2.html">
+        <span class="arrow-text">Asteroids C++</span>
+      </a>
+      <a class="arrow right-arrow" href="uno.html">
+        <span class="arrow-text">Uno</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Combat Game</h1>
+          <h3 class="date">Summer 2022</h3>
+          <p>
+            I aimed to embark on a more extensive project in Unity to explore the software's capabilities in greater depth. 
+            This involved delving into combat game logic, implementing interchangeable weapon sprites, creating animations 
+            and utilizing an event system. As part of this ongoing endeavour, I am actively involved in refining aspects such 
+            as dungeon generation, inventory management, particle and sound effects, and optimization techniques.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/jWXh9nrHwbM" frameborder="0" allowfullscreen ></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+      
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+      
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Rogue-Like" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(65, 21, 149)">C#</div>
+            <div style="background-color: rgb(84, 84, 84)">Unity</div>
+            <div style="background-color: rgb(172, 18, 18)">Animations</div>
+            <div style="background-color: rgb(33, 197, 129)">Combat</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Combat System:</b> The combat system involves sending events between the player and the enemy based on hits. 
+              This is controlled via a state machine that links to the animation to be played. Normal hits deal some damage, 
+              but if the poise is full, the poise ring is reset, and the damage is multiplied. The poise ring decreases over 
+              time and only increases with each hit. Dodging creates a small window where you cannot be hit. You can also parry, 
+              which, if timed just before a hit, will prevent damage and stun the enemy. However, if you hold the parry for too 
+              long, the hit will only be blocked without stunning the enemy.
+            </li>
+            <li><b>Animation System:</b> I've developed an animation system that has undergone several iterations whilst learning
+              Unity's built-in animation system. This includes creating transitions using animation variables and controlling additional 
+              features such as dodge periods and the end of animations using Unity's animation events. However, I have since discovered 
+              that controlling animations purely in code may be more complex to implement, but it offers much greater control, easier 
+              editing and decoupling of animations from an entity's state machine.
+            </li>
+            <li><b>Equipable Weapons:</b> A particularly challenging aspect of the project was enabling equipable weapons with the same 
+              animations. To achieve this, I utilized Unity's animator to align the weapon's position to match the current animation frames. 
+              While this approach worked to some extent, it revealed the true complexity of the problem, especially when dealing with 
+              weapons of different lengths. This experience has given me a deeper appreciation for the workload on the art side of 
+              game development, as it's become clear that the solution often requires creating numerous animations for different scenarios.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> Initially, this was intended to be a group project; however, all the other members ended up dropping out and contributed very 
+            little code. As a result, I made the decision to continue my progress and learn as much as I could by working with a game engine 
+            like Unity and applying general game development principles.
+
+            As this was my first major Unity project, I encountered numerous challenges since I was still learning. For instance, I wasn't 
+            sure how to approach combat interactions and animations, as I had never used a state machine in this manner before. The project's 
+            implementation has undergone multiple iterations, and I believe it is still overly complex due to the learning process. However, 
+            if I were to start this project now, I could make it significantly less complex, cleaner, and more scalable.
+          </p>
+          <h2>Trello</h2>
+          <img style="width: 100%;" src="../Assets/CombatTrello.png"  >
+        </section>
+      </div>
+
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

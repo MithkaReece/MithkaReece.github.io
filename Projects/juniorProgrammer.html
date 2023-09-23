@@ -4,25 +4,97 @@
       <link rel="stylesheet" type="text/css" href="../project.css">
       <link rel="stylesheet" type="text/css" href="../navbar.css">
       <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
     </head>
     <body>
       <nav class="navbar">
-        <h2 class="navbar-header">Reece Waite</h2>
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
         <ul class="navbar-links">
+          <li><a class="active" href="">Unity-Course</a></li>
           <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
           <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
 
-      <a class="arrow left-arrow" href="asteroids2.html">
-        <span class="arrow-text">Asteroids C++</span>
+      <a class="arrow left-arrow" href="cooking.html">
+        <span class="arrow-text">Cooking Game</span>
       </a>
-      <a class="arrow right-arrow" href="rogue-like.html">
-        <span class="arrow-text">Rogue-Like</span>
+      <a class="arrow right-arrow" href="farming.html">
+        <span class="arrow-text">Farming Game</span>
       </a>
 
       <div class="main">
-        <h1 class="project-title">Junior Programmer Unity Course</h1>
+        <section class="project-section">
+          <h1 class="project-title">Unity's Junior Pathway Course</h1>
+          <h3 class="date">Summer 2023</h3>
+          <p> In this course, I learned how to create a cooking game in Unity, which provided me with a comprehensive 
+            understanding of the entire game development process, from inception to completion. Moreover, I acquired 
+            valuable insights into the implementation of improved and more organized coding standards suitable for larger game code bases.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/p7EbMVl7CMg" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+      
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+      
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Unity-Create-with-Code" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(65, 21, 149)">C#</div>
+            <div style="background-color: rgb(84, 84, 84)">Unity</div>
+            <div style="background-color: rgb(21, 33, 150)">UI</div>
+            <div style="background-color: rgb(172, 18, 18)">Special Effects</div>
+          </div>
+
+          <h2>Key Features Learnt</h2>
+          <ul>
+            <li><b>Reinforce Game Dev Foundations:</b> This course helped me gain confidence in using an engine like Unity by guiding me 
+              through the creation of several small games. This practical experience enabled me to become more efficient in setting up 
+              processes that many games share, such as handling UI, updating stats, managing scene transitions, and establishing general gameplay loops.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> 
+            The combination of step-by-step tutorials followed by independent tasks allowed me to develop confidence in my abilities and become 
+            more familiar with using a game engine. One aspect that presented a challenge, as it was a new process for me, was the theoretical 
+            information provided about creating documentation for different game features. Typically, I would use my own Trello board to outline 
+            the features I wanted with a rough sense of their priority. However, this course demonstrated that you can delve into much greater 
+            detail regarding the importance of each feature and estimating the effort required to implement them.
+          </p>
+          <p>Below, you will find a collection of games produced during this course, all of which have been built for the web. The prototypes are 
+            games that follow step-by-step tutorials, however, they often include optional extension features which I implemented myself. The 
+            challenges encompass either complete games with numerous bugs that needed fixing or the beginnings of a game with many features for 
+            me to add myself.
+          </p>
+        </section>
 
         <div class="game-container" data-src="../Games/Prototype1/index.html">
           <h3>Prototype 1 - Coop Car Race</h3>
@@ -168,49 +240,6 @@
           </div>
         </div>
 
-        <div class="game-container" data-src="../Games/BallCollector/index.html">
-          <h3>Optional Game</h3>
-          <h3>Made for mobile</h3>
-          <h3>Ball Collector</h3>
-          <div class="button-container">
-            <button class="load-button">Load/Reload Game</button>
-            <button class="unload-button">Unload Game</button>
-          </div>
-          <img class="placeholder-image" src="../Games/BallCollector/Preview.png" width="323" height="700">
-          <iframe class="game" width="323" height="0" hidden></iframe>
-          <div class="tags">
-            <div style="background-color: rgb(218, 53, 16)">Mouse Control</div>
-            <div style="background-color: rgb(5, 104, 99)">Touch Control</div>
-            <div style="background-color: rgb(187, 169, 68)">Multi-Platform</div>
-            <div style="background-color: rgb(110, 11, 223)">UI</div>
-            <div style="background-color: rgb(11, 223, 75)">Scoring</div>
-            <div style="background-color: rgb(223, 11, 110)">Difficulty</div>
-          </div>
-        </div>
-
-        <div class="game-container" data-src="../Games/CookingGame/index.html">
-          <h3>Submission for OOP and persistent data</h3>
-          <h3>Following CodeMonkey's Course</h3>
-          <h3>Cooking Game</h3>
-          <div class="button-container">
-            <button class="load-button">Load/Reload Game</button>
-            <button class="unload-button">Unload Game</button>
-          </div>
-          <img class="placeholder-image" src="../Games/CookingGame/Preview.png"width="1244" height=auto>
-          <iframe class="game" width="1244" height="0" hidden></iframe>
-          <div class="tags">
-            <div style="background-color: rgb(218, 53, 16)">Mouse Control</div>
-            <div style="background-color: rgb(5, 104, 99)">Controller Support</div>
-            <div style="background-color: rgb(187, 169, 68)">Multi-Platform</div>
-            <div style="background-color: rgb(110, 11, 223)">Extensive UI</div>
-            <div style="background-color: rgb(11, 223, 75)">Scoring</div>
-            <div style="background-color: rgb(223, 11, 110)">Sound Effects</div>
-            <div style="background-color: rgb(11, 209, 223)">Gameplay Loop</div>
-            <div style="background-color: rgb(233, 128, 80)">Rebindable Controls</div>
-            <div style="background-color: rgb(120, 167, 11)">Polish</div>
-          </div>
-        </div>
-
         <script>
           const gameContainers = document.querySelectorAll('.game-container');
           let activeGameIframe = null; // Track the active game's iframe
@@ -261,7 +290,7 @@
 
       <footer class="bottom-banner">
         <div class="links">
-          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
           <a href="https://github.com/MithkaReece">GitHub</a>
           <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
         </div>

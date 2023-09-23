@@ -4,65 +4,109 @@
       <link rel="stylesheet" type="text/css" href="../project.css">
       <link rel="stylesheet" type="text/css" href="../navbar.css">
       <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
     </head>
     <body>
       <nav class="navbar">
-        <h2 class="navbar-header">Reece Waite</h2>
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
         <ul class="navbar-links">
+          <li><a class="active" href="">Asteroids-C++</a></li>
           <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
           <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
+
       <a class="arrow left-arrow" href="2.5D.html">
         <span class="arrow-text">2.5D Game</span>
       </a>
-      <a class="arrow right-arrow" href="juniorProgrammer.html">
-        <span class="arrow-text">Unity Course</span>
+      <a class="arrow right-arrow" href="combat.html">
+        <span class="arrow-text">Combat Game</span>
       </a>
 
       <div class="main">
-        <h1 class="project-title">Asteroids C++</h1>
-        <section class="section2">
-          <img class="project-image" src="../Assets/Asteroids2.png"  >
-          <div class="tags">
-            <div style="background-color: rgb(218, 53, 16)">C++</div>
-            <div style="background-color: rgb(223, 106, 11)">Entt</div>
-            <div style="background-color: rgb(60, 131, 3)">SFML</div>
-            <div style="background-color: rgb(41, 3, 131)">Scene Management</div>
-            <div style="background-color: rgb(3, 101, 131)">Pausing</div>
-            <div style="background-color: rgb(80, 3, 131)">Event System</div>
+        <section class="project-section">
+          <h1 class="project-title">Asteroids C++</h1>
+          <h3 class="date">Summer 2023</h3>
+          <p>I developed the iconic Asteroids game using C++ as a means to enhance my C++ skills and to grasp the 
+            Entity-Component-System (ECS) game design pattern, utilizing the EnTT library. Additionally, I employed 
+            SFML for rendering the 2D visuals. The game includes the classic Asteroids gameplay and features such as a 
+            pause menu, main menu and the ability to save high scores.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/alMiwroLwPE" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+      
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+      
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
           </div>
-          <section>
-            <h3>Development - July-Current 2023</h3>
-            <p>To enhance my proficiency in C++ and grasp the concept of ECS (Entity Component System), 
-              I embarked on re-creating the classic Asteroids game. For the visual elements, I employed the SFML library. 
-              This endeavor involved the development of a mechanism to manipulate and navigate through various game scenes, 
-              accomplished through the implementation of a scene manager.
-              </p><p>
-              The scene manager functions by overseeing distinct scenes, each responsible for monitoring entities and systems. 
-              These scenes can be generated, removed, or paused, consequently affecting the entities and systems within them. 
-              Complementing this, a separate system manager oversees the creation, deletion, and updates of the active systems.
-              </p><p>
-              The coordination between systems, the scene manager, and the system manager is achieved through event communication 
-              facilitated by the entt event dispatcher. The rest of the Asteroid game is constructed based on this fresh structure, 
-              maintaining the gameplay reminiscent of my earlier JS version. In addition to the core gameplay, I introduced new 
-              elements such as a main menu, a pause menu, and the functionality to save high scores.
-              </p><p>
-              As a next step, my intention is to refine the game further by incorporating particle effects, sound effects, 
-              optimization measures, and visual enhancements.</p>
-         </section>
-        </section>
 
-        <h3 class="section-title">Gameplay</h3>
-        <section class="section2">
-          <iframe width="1190" height="790" src="https://www.youtube.com/embed/alMiwroLwPE" frameborder="0" allowfullscreen></iframe>
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Asteroids-CPP" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(33, 33, 33); color: white">Entt</div>
+            <div style="background-color: rgb(114, 175, 41)">SFML</div>
+            <div style="background-color: rgb(190, 24, 182)">Scene Management</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Physics:</b> Apply velocity as you would in space and accelerate the player's ship to move forward. 
+              Then, simply check for collisions, which are simplified because asteroids are mostly circular shapes, 
+              making pure distance sufficient for detection.
+            </li>
+            <li><b>Scene Management:</b> Implemented custom scene management that enables the loading and unloading 
+              of multiple scenes independently, with each scene responsible for its own entities and systems. 
+              Scenes can also be paused, which skips their systems in updates and all communication is decoupled using events.
+            </li>
+            <li><b>Scoring System:</b> The score is based on the size of the asteroid hit by a bullet. 
+              This score is saved to a file as a single high score if it surpasses the current one. In 
+              the future, you will have the option to enter a username associated with the high score so 
+              that multiple high scores can be saved.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p>Scene management initially resulted in a lot of circular dependencies because scenes contained systems 
+            and I needed systems to trigger scene management events, such as loading a scene. To address this issue, 
+            I decoupled systems from scenes by storing only an ID and actually storing systems in a central system manager. 
+            When systems need to trigger scene events, I resolved this by using events through a central event manager.
+          </p>
+          <h2>Trello</h2>
+          <img style="width: 100%;" src="../Assets/AsteroidsCPPTrello.png"  >
         </section>
       </div>
-      </div>
+
+
 
       <footer class="bottom-banner">
         <div class="links">
-          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
           <a href="https://github.com/MithkaReece">GitHub</a>
           <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
         </div>

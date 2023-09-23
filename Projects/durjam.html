@@ -4,80 +4,116 @@
       <link rel="stylesheet" type="text/css" href="../project.css">
       <link rel="stylesheet" type="text/css" href="../navbar.css">
       <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
     </head>
     <body>
       <nav class="navbar">
-        <h2 class="navbar-header">Reece Waite</h2>
+        <div class="navbar-left">
+          <a class="navbar-header" href="../index.html">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
         <ul class="navbar-links">
+          <li><a class="active" href="">DurJam</a></li>
           <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
           <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
 
       <a class="arrow left-arrow" href="aoe.html">
         <span class="arrow-text">Age Of Empires</span>
       </a>
-      <a class="arrow right-arrow" href="uno.html">
-        <span class="arrow-text">Uno</span>
+      <a class="arrow right-arrow" href="asteroids.html">
+        <span class="arrow-text">Asteroids JS</span>
       </a>
       
 
       <div class="main">
-        <h1 class="project-title">DurJam Re-Sources</h1>
-        <section class="section2">
-          <div class="links" style="padding-bottom: 1rem; margin:0"><a style="margin:0" href="https://devpost.com/software/re-sources">DevPost</a></div>
-          <img class="project-image" src="../Assets/DurJam.png" >
-          <div class="tags">
-            <div style="background-color: rgb(218, 53, 16)">World Editing</div>
-            <div style="background-color: rgb(223, 106, 11)">Gravity Altering</div>
-            <div style="background-color: rgb(60, 131, 3)">Resource System</div>
-            <div style="background-color: rgb(41, 3, 131)">Collaboration</div>
-            <div style="background-color: rgb(3, 101, 131)">Survival</div>
+        <section class="project-section">
+          <h1 class="project-title">DurJam Re-Sources</h1>
+          <h3 class="date">Summer 2020</h3>
+          <p>During the four-day DurJam event, our team of four embarked on the creation of a survival resource collection game, 
+            drawing inspiration from titles like Terraria and Oxygen Not Included. The core concept involved traveling between 
+            compact planets, each brimming with diverse resources.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/nOtBcmnp-WU" frameborder="0" allowfullscreen ></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+    
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+    
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
           </div>
-          <section>
-            <h3>Development - August 2020</h3>
-            <p>During a brief four-day event called DurJam, our team of four embarked on creating a 
-              distinctive survival game. This endeavor marked our first experience collaborating on a project, 
-              underscoring the significance of version control. Initially, we employed an online editor, Glitch, 
-              where we all simultaneously contributed code. While this enabled us to observe each other's code as it 
-              was being written, a notable challenge emerged: the inability to test incomplete code. This limitation 
-              was less pronounced given our short timeline, but it prompted us to transition to using GitHub. This 
-              allowed us to work concurrently, merging our efforts at the project's conclusion.
-              </p><p>
-              During this venture, we achieved several milestones. These encompassed the creation of procedurally 
-              generated planets, implementation of rotating gravity at planet corners—permitting players to traverse 
-              the entire planet—resource collection mechanics, an inventory system, and functional survival indicators 
-              like oxygen and food levels. Players could then embark on interplanetary journeys by boarding a ship 
-              (activated with the 'f' key) and flying to new planets.
-              </p><p>
-              However, certain objectives remained unfinished. These included incorporating specific ores on planets, 
-              introducing greater variety to planet environments, developing a crafting system, and implementing the 
-              mechanics for loading resources to fuel the rocket.
-              </p><p>
-              This endeavor not only resulted in a functional survival game prototype but also offered a firsthand 
-              lesson on the importance of version control and collaborative development.
-            </p>
-          </section>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Re-Sources" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+            <div style="background-color: rgb(238, 40, 99)">P5</div>
+            <div style="background-color: rgb(25, 180, 219)">Custom Gravity</div>
+            <div style="background-color: rgb(25, 219, 51)">Teamwork</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Custom Gravity:</b> A unique mechanic for this game was the ability to walk around the planet, necessitating 
+              relative gravity. However, as the game evolved into a sandbox, we had to use tiles, which resulted in the planet 
+              being square. This meant that the gravity had to change at the corners, which worked reasonably well on the surface. 
+              However, when you were close to the middle of the world, it did not work as effectively, as the gravity change became too sensitive.
+            </li>
+            <li><b>UI:</b> We used UI elements to display various survival stats such as oxygen, food, and more, along with an inventory system 
+              for collecting materials. Originally, we planned to implement crafting in this inventory system, particularly for crafting fuel to 
+              travel to the next planet. However, in the end, we opted to allow free travel to the next planet, which is randomly generated and features two biomes.
+            </li>
+            <li><b>Sound Effects & Music:</b> Having a non-programming team member with experience in music offered us an excellent opportunity for back-and-forth 
+              communication regarding the kind of sounds we truly wanted for different gameplay situations.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> Participating in my first game jam was a significant challenge and provided valuable experience in 
+            handling issues such as scope creep and collaborative coding. The type of game we attempted to create, 
+            a sandbox, wasn't ideal for a game jam due to its complexity and scale.
+
+            Initially, we tried using Glitch for collaborative coding, but it led to issues because we could only 
+            test code if everyone else's code was incomplete, which slowed down production. To address this, we 
+            ecided to create individual copies on GitHub and merge versions later. This allowed individuals to test their code as they wrote it.
+          </p>
         </section>
 
-        <h3 class="section-title">Gameplay</h3>
-        <section class="section2">
-          <iframe width="1354" height="628" src="https://www.youtube.com/embed/nOtBcmnp-WU" frameborder="0" allowfullscreen ></iframe>
-        </section>
-
-        <div class="gameContainer"></div>
-        <h3 class="section-title">Embedded Game (with sound)</h3>
-        <h2>Controls: <br>
-        Move = WASD/Arrow Keys <br>
-        Interact = F</h2>
-        <div class="button-container">
-          <button class="loadGameButton">Load/Reload Game</button>
-          <button class="unloadGameButton">Unload Game</button>
+        <div class="game-container">
+          <h3 class="section-title">Embedded Game (with sound)</h3>
+          <h2>Controls: <br>
+          Move = WASD/Arrow Keys <br>
+          Interact = F</h2>
+          <div class="button-container">
+            <button class="loadGameButton">Load/Reload Game</button>
+            <button class="unloadGameButton">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Games/DurJam-Re-Sources/Preview.png" alt="Placeholder Image" width="1370px" height=auto>
+          <iframe class="game" width="1370px" height="0" hidden></iframe>
         </div>
-        <img class="placeholder-image" src="../Games/DurJam Re-Sources/Preview.png" alt="Placeholder Image" width="1370px" height=auto>
-        <iframe class="game" width="1370px" height="0" hidden></iframe>
-
-        <script>
+          <script>
           const gameFrame = document.querySelector(".game");
           const placeholderImage = document.querySelector('.placeholder-image');
 
@@ -85,7 +121,7 @@
           const unloadGameButton = document.querySelector(".unloadGameButton");
 
           loadGameButton.addEventListener("click", function() {
-            gameFrame.src = "../Games/DurJam Re-Sources/index.html";
+            gameFrame.src = "../Games/DurJam-Re-Sources/index.html";
             gameFrame.hidden = false; // Show game
             gameFrame.style.height = '700px'; // Give game height
             placeholderImage.style.display = 'none'; // Hide preview image
@@ -101,11 +137,13 @@
             placeholderImage.hidden = false;
           });
         </script>
+
+        
       </div>
 
       <footer class="bottom-banner">
         <div class="links">
-          <a href="mailto:reece.waite1@email.com">Email</a>
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
           <a href="https://github.com/MithkaReece">GitHub</a>
           <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
         </div>
