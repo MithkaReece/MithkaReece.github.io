@@ -7,6 +7,7 @@
 }
 
 body {
+  width:100%;
   margin: 0;
   padding: 0;
   background-color:var(--primary-color);
@@ -29,9 +30,6 @@ body {
 .banner h1 {
   font-size: 7rem;
   color:var(--secondary-color);
-  /* width: 50%;
-  margin: auto;
-  padding-left: 1rem; */
 }
 
 .banner-line {
@@ -77,6 +75,7 @@ body {
   transition: transform 0.5s;
 }
 
+
 .image-card ul {
   padding-left: 1.5rem
   /* padding:0.2rem; */
@@ -93,15 +92,28 @@ body {
   justify-content: center;
   padding-bottom: 0rem;
   width: 100%;
+  height: 20rem;
   box-sizing: content-box;
 }
+
+@media (max-width: 1000px) {
+  .image-card {
+    width: 50rem;
+  }
+
+  .image-link {
+    height: 33rem;
+  }
+}
+
 
 .card-image {
   padding:0;
   box-sizing: border-box;
   border: 0.4rem solid transparent; 
-  width: 30rem;
-  height: 20rem;
+  /* width: 30rem; */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transform: scale(1.025);
   transition: transform 0.4s ease, border 0.5s ease;
