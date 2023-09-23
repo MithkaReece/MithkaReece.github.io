@@ -234,7 +234,7 @@ ul {
   transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1.0); 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .left-arrow, 
   .right-arrow {
     display: none;
@@ -272,7 +272,7 @@ ul {
   margin-right: 0rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .github-tag {
     height: 4rem;
   }
@@ -288,7 +288,7 @@ ul {
 
 
 /* Styles for screens with a maximum width of 768px (typical mobile devices) */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .main {
     padding: 2rem 0rem;
   }

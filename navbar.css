@@ -111,7 +111,7 @@ nav ul li a:hover {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
