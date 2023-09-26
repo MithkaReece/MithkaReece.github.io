@@ -86,9 +86,12 @@
               including seed planting, crop growth, and harvesting. Currently, the crops are automatically sold for money, but they 
               will also serve the purpose of feeding animals in the future.
             </li>
-            <li><b>Animal Behaviour AI:</b> Currently, animals move using a simple steering system that directs them toward randomly
-               selected nearby targets. In the future, the AI will be overhauled to operate on a behaviour tree, and the AI will employ
-                a more sophisticated pathfinding approach, most likely using A* with custom heuristics.
+            <li><b>Custom Animal Behaviour AI in progress:</b> I have currently developed an Behaviour tree for my animal AI decisions. 
+              This implementation allows actions to be long running but interruptable via higher priority conditions. This framework 
+              is all functional, then next step is to now implement the different actions as the only working one makes the animal 
+              randomly wander. As a part of this I will develop a pathfinding approach, most likely using A* with custom heuristics 
+              to traverse to a location. I also want to have a herd system which have shared memory of resource locations such as 
+              water & food source locations.
             </li>
             <li><b>Resource Management (TODO):</b> I implemented an inventory system for the player, enabling the collection of crop and 
               animal produce. This system allows the player to decide what to do with these items. The game follows a simple resource loop, 
