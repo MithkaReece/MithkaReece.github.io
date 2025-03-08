@@ -21,30 +21,31 @@
         </div>
        
         <ul class="navbar-links">
-          <li><a class="active" href="">Asteroids</a></li>
+          <li><a class="active" href="">Asteroids-C++</a></li>
           <li><a href="../">Home</a></li>
-          <li><a href="../skills.html">Skills</a></li>
           <li><a href="../cv.html">CV</a></li>
           <li><a href="../about.html">About</a></li>
         </ul>
       </nav>
 
-      <a class="arrow left-arrow" href="durjam.html">
-        <span class="arrow-text">DurJam</span>
+      <a class="arrow left-arrow" href="combat.html">
+        <span class="arrow-text">Combat System</span>
       </a>
-      <a class="arrow right-arrow" href="snake.html">
-        <span class="arrow-text">Snake</span>
+      <a class="arrow right-arrow" href="uno.html">
+        <span class="arrow-text">Uno</span>
       </a>
 
       <div class="main">
         <section class="project-section">
-          <h1 class="project-title">Asteroids JS</h1>
-          <h3 class="date">Winter 2019</h3>
-          <p>My first attempt at recreating the classic Asteroids game. 
-            This was my endeavour to create a larger game, bigger than Snake, Connect Four, Tic-Tac-Toe, or Chess.
+          <h1 class="project-title">Asteroids C++</h1>
+          <h3 class="date">Summer 2023</h3>
+          <p>I developed the iconic Asteroids game using C++ as a means to enhance my C++ skills and to grasp the 
+            Entity-Component-System (ECS) game design pattern, utilizing the EnTT library. Additionally, I employed 
+            SFML for rendering the 2D visuals. The game includes the classic Asteroids gameplay and features such as a 
+            pause menu, main menu and the ability to save high scores.
           </p>
           <div class="video-container">
-            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/pJT0DXBGvuA" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/alMiwroLwPE" frameborder="0" allowfullscreen class="project-video"></iframe>
             <script>
               // JavaScript to make the iframe responsive
               function adjustIframeHeight() {
@@ -54,83 +55,53 @@
                   var newHeight = containerWidth / aspectRatio;
                   iframe.style.height = newHeight + 'px';
               }
-    
+      
                 // Call the function when the window is resized
                 window.addEventListener('resize', adjustIframeHeight);
-    
+      
                 // Call the function initially
                 adjustIframeHeight();
             </script>
           </div>
 
           <div class="tags">
-            <a href="https://github.com/MithkaReece/asteroids" target="_blank">
+            <a href="https://github.com/MithkaReece/Asteroids-CPP" target="_blank">
               <img src="../Assets/github-logo.png" class="github-tag">
             </a>
-            <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-            <div style="background-color: rgb(238, 40, 99)">P5</div>
-            <div style="background-color: rgb(135, 8, 194)">OOP</div>
-            <div style="background-color: rgb(121, 153, 5)">Particle Effects</div>
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(33, 33, 33); color: white">Entt</div>
+            <div style="background-color: rgb(114, 175, 41)">SFML</div>
+            <div style="background-color: rgb(190, 24, 182)">Scene Management</div>
           </div>
 
           <h2>Key Features</h2>
           <ul>
-            <li><b>Physics:</b> The combat system involves sending events between the player and the enemy based on hits. 
-              This is controlled via a state machine that links to the animation to be played. Normal hits inflict some 
-              damage, but if the poise is full, the poise ring is reset, and the damage is multiplied. The poise ring 
-              decreases over time and only increases from each hit. Dodging creates a small window where you cannot be 
-              hit. You can also parry, which, if timed just before a hit, will prevent damage and stun the enemy. If 
-              parry is held for too long, the hit will only be blocked without stunning the enemy.
+            <li><b>Physics:</b> Apply velocity as you would in space and accelerate the player's ship to move forward. 
+              Then, simply check for collisions, which are simplified because asteroids are mostly circular shapes, 
+              making pure distance sufficient for detection.
             </li>
-            <li><b>Particle Effects:</b> I want to try some particle effects, so I created my own particles that shrink and 
-              decay over time. Small particles appear when asteroids collide. When the ship collides, I made a few rectangles 
-              be the particles to represent parts of the ship. Lastly, for thrusting, I added a red triangle to the ship's 
-              bottom with a random offset to imitate thrusting fire.
+            <li><b>Scene Management:</b> Implemented custom scene management that enables the loading and unloading 
+              of multiple scenes independently, with each scene responsible for its own entities and systems. 
+              Scenes can also be paused, which skips their systems in updates and all communication is decoupled using events.
+            </li>
+            <li><b>Scoring System:</b> The score is based on the size of the asteroid hit by a bullet. 
+              This score is saved to a file as a single high score if it surpasses the current one. In 
+              the future, you will have the option to enter a username associated with the high score so 
+              that multiple high scores can be saved.
             </li>
           </ul>
           <h2>Challenges, solutions and lessons learnt</h2>
-          <p> This was my first larger game that I created, so my main learning experience was leveraging Object-Oriented 
-            Programming (OOP) techniques I had just learned to manage a larger project with many interacting mechanics, 
-            such as shooting and collision detection. I also learned how quickly you can create prototypes in JavaScript, 
-            but I also realized how inefficient it can be, making it unsuitable for larger games.
+          <p>Scene management initially resulted in a lot of circular dependencies because scenes contained systems 
+            and I needed systems to trigger scene management events, such as loading a scene. To address this issue, 
+            I decoupled systems from scenes by storing only an ID and actually storing systems in a central system manager. 
+            When systems need to trigger scene events, I resolved this by using events through a central event manager.
           </p>
+          <h2>Trello</h2>
+          <img style="width: 100%;" src="../Assets/AsteroidsCPPTrello.png"  >
         </section>
-     
-        <div class="game-container">
-          <h3 class="section-title">Embedded Game</h3>
-          <div class="button-container">
-            <button class="loadGameButton">Load/Reload Game</button>
-            <button class="unloadGameButton">Unload Game</button>
-          </div>
-          <img class="placeholder-image" src="../Assets/Asteroids.png" alt="Placeholder Image" width="800" height=auto>
-          <iframe class="game" width="800" height="0" hidden></iframe>
-        </div>
-        <script>
-          const gameFrame = document.querySelector(".game");
-          const placeholderImage = document.querySelector('.placeholder-image');
-
-          const loadGameButton = document.querySelector(".loadGameButton");
-          const unloadGameButton = document.querySelector(".unloadGameButton");
-
-          loadGameButton.addEventListener("click", function() {
-            gameFrame.src = "../Games/AsteroidsJS/index.html";
-            gameFrame.hidden = false; // Show game
-            gameFrame.style.height = '700px'; // Give game height
-            placeholderImage.style.display = 'none'; // Hide preview image
-            placeholderImage.hidden = true; // Hide preview image
-
-          });
-
-          unloadGameButton.addEventListener("click", function() {
-            gameFrame.src = "about:blank";
-            gameFrame.hidden = true;
-            gameFrame.style.height = "0";
-            placeholderImage.style.display = 'block'; 
-            placeholderImage.hidden = false;
-          });
-        </script>
-
       </div>
+
+
 
       <footer class="bottom-banner">
         <div class="links">

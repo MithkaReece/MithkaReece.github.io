@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Asteroids</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <a class="arrow left-arrow" href="durjam.html">
+        <span class="arrow-text">DurJam</span>
+      </a>
+      <a class="arrow right-arrow" href="snake.html">
+        <span class="arrow-text">Snake</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Asteroids JS</h1>
+          <h3 class="date">Winter 2019</h3>
+          <p>My first attempt at recreating the classic Asteroids game. 
+            This was my endeavour to create a larger game, bigger than Snake, Connect Four, Tic-Tac-Toe, or Chess.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/pJT0DXBGvuA" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+    
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+    
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/asteroids" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+            <div style="background-color: rgb(238, 40, 99)">P5</div>
+            <div style="background-color: rgb(135, 8, 194)">OOP</div>
+            <div style="background-color: rgb(121, 153, 5)">Particle Effects</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Physics:</b> The combat system involves sending events between the player and the enemy based on hits. 
+              This is controlled via a state machine that links to the animation to be played. Normal hits inflict some 
+              damage, but if the poise is full, the poise ring is reset, and the damage is multiplied. The poise ring 
+              decreases over time and only increases from each hit. Dodging creates a small window where you cannot be 
+              hit. You can also parry, which, if timed just before a hit, will prevent damage and stun the enemy. If 
+              parry is held for too long, the hit will only be blocked without stunning the enemy.
+            </li>
+            <li><b>Particle Effects:</b> I want to try some particle effects, so I created my own particles that shrink and 
+              decay over time. Small particles appear when asteroids collide. When the ship collides, I made a few rectangles 
+              be the particles to represent parts of the ship. Lastly, for thrusting, I added a red triangle to the ship's 
+              bottom with a random offset to imitate thrusting fire.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> This was my first larger game that I created, so my main learning experience was leveraging Object-Oriented 
+            Programming (OOP) techniques I had just learned to manage a larger project with many interacting mechanics, 
+            such as shooting and collision detection. I also learned how quickly you can create prototypes in JavaScript, 
+            but I also realized how inefficient it can be, making it unsuitable for larger games.
+          </p>
+        </section>
+     
+        <div class="game-container">
+          <h3 class="section-title">Embedded Game</h3>
+          <div class="button-container">
+            <button class="loadGameButton">Load/Reload Game</button>
+            <button class="unloadGameButton">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Assets/Asteroids.png" alt="Placeholder Image" width="800" height=auto>
+          <iframe class="game" width="800" height="0" hidden></iframe>
+        </div>
+        <script>
+          const gameFrame = document.querySelector(".game");
+          const placeholderImage = document.querySelector('.placeholder-image');
+
+          const loadGameButton = document.querySelector(".loadGameButton");
+          const unloadGameButton = document.querySelector(".unloadGameButton");
+
+          loadGameButton.addEventListener("click", function() {
+            gameFrame.src = "../Games/AsteroidsJS/index.html";
+            gameFrame.hidden = false; // Show game
+            gameFrame.style.height = '700px'; // Give game height
+            placeholderImage.style.display = 'none'; // Hide preview image
+            placeholderImage.hidden = true; // Hide preview image
+
+          });
+
+          unloadGameButton.addEventListener("click", function() {
+            gameFrame.src = "about:blank";
+            gameFrame.hidden = true;
+            gameFrame.style.height = "0";
+            placeholderImage.style.display = 'block'; 
+            placeholderImage.hidden = false;
+          });
+        </script>
+
+      </div>
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

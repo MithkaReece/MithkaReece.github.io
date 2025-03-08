@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Particle Editor</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+ 
+
+      <a class="arrow left-arrow" href="jetsetcrash.html">
+        <span class="arrow-text">JetSetCrash</span>
+      </a>
+      <a class="arrow right-arrow" href="brightside.html">
+        <span class="arrow-text">Brightside</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Particle Editor</h1>
+          <h3 class="date">2024</h3>
+          <p>
+            In my free time, I created a particle editor to address frustrations from previous projects, 
+            where tweaking particle effects was slow due to the need for project rebuilds or excessive debug sliders. 
+            My goal was to build an editor that:</p>
+            <ul>
+            <li>Saved and loaded effects using JSON</li>
+            <li>Allowed live editing via UI, which is why I chose ImGui for its fast and easy setup</li>
+            <li>Ran particles on the GPU using Compute Shaders, improving performance compared to previous projects where 
+            particles had a significant impact, often requiring a reduction in effect resolution</li>
+           </ul>
+          <img class="card-image" src="../Assets/SoftParticles.gif"
+          width="950" 
+      height="490">
+
+          <div class="tags">
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+            <div style="background-color: rgb(126, 11, 36)">Particles</div>
+            <div style="background-color: rgb(59, 7, 182)">Editor</div>
+            <div style="background-color: rgb(53, 207, 182)">Solo</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><p><b>Particles:</b> I developed a separate library for running particle effects, independent of the editor itself. 
+              This separation allows the particle system to be integrated into other projects while keeping the editor optional 
+              as a standalone tool.</p>
+              <p>To handle particles efficiently, I implemented:</p>
+              <ul>
+              <li>Compute shaders for particle emission and updates</li>
+              <li>Constant buffers to modify emission and update behavior using saved JSON data</li>
+              </ul>
+              <p>In a short time, I implemented key features, including:<p></p>
+              <ul>
+              <li>Cone emission with adjustable direction and angle</li>
+              <li>Particle pooling with a defined limit</li>
+              <li>Configurable sprite selection and blending modes</li>
+              <li>Spawn control, supporting both constant rates and bursts</li>
+              <li>Velocity control, including initial velocity and acceleration</li>
+              <li>Sprite rotation, size control and various lifetime-based alpha transitions</li>
+              <li>Depth sorting using a parallel compute sort algorithm</li>
+              <li>Soft particles, where alpha fades near surfaces to prevent harsh intersections</li>
+              </ul>
+              I also plan to extend the system to support meshes instead of just billboarded sprites using instanced rendering.
+            </li>
+            <li><p><b>Editor:</b> I used ImGui to create a basic editor featuring numeric inputs, sliders and selectable tabs. 
+              The editor includes playback controls, allowing users to pause, restart, stop or adjust playback speed while 
+              creating particles. It also supports looping options, with all parameters serialized and saved to JSON.
+              </p>
+              <p>Additionally, I implemented multiple emitters within a single particle system, enabling:</p>
+              <ul>
+              <li>Emitters to be saved separately and reused in different systems</li>
+              <li>Live toggling of emitter visibility for better control</li>
+              </ul>
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p>
+            I gained significant experience with ImGui and after working on subsequent projects, I've learned additional features 
+            and identified ways to improve my editor's usability and workflow.
+            The most challenging aspect was working with compute shaders, particularly reworking algorithms to function in parallel and organizing 
+            them efficiently. Given the many features I wanted to support, I needed to structure the code by separating different functions into 
+            separate HLSL files and including them as needed to avoid bloating a single file.
+            I also planned to implement a preprocessor step to control which includes are used. For example, this would allow disabling specific 
+            features like burst spawning, ensuring the relevant functions wouldn't even be included in the compute shader.
+          </p>
+        </section>
+      </div>
+
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

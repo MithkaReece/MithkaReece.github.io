@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center; 
-  height: 15rem;
+  height: 11rem;
   background-color: var(--top-color);
   top: 0;
   position: relative;

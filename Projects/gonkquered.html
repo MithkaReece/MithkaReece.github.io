@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Gonkquered</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+ 
+
+      <a class="arrow left-arrow" href="brightside.html">
+        <span class="arrow-text">Brightside</span>
+      </a>
+      <a class="arrow right-arrow" href="combat.html">
+        <span class="arrow-text">Combat System</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Gonkquered</h1>
+          <h3 class="date">2024</h3>
+          <p>
+            I created a Mushroom Wars clone as my first skills project in the academy. This project helped me assess how much my 
+            C++ skills had developed, while also providing my first experience collaborating with artists to figure out the 
+            required assets. This led to plenty of back-and-forth discussions, adjusting asset formats and managing the limitations 
+            of their workload and the small pipeline in place.
+          </p>
+          <img class="card-image" src="../Assets/GonkLevelEditor.gif" width="960" height="540">
+          <br></br>
+          <img class="card-image" src="../Assets/GonkOptionsMenu.gif" width="960" height="540">
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Rogue-Like" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(192, 0, 0); color: white">PlayBuffer</div>
+            <div style="background-color: rgb(59, 7, 182)">Gameplay</div>
+            <div style="background-color: rgb(109, 206, 18)">Editor</div>
+            <div style="background-color: rgb(218, 53, 16)">Coop</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><p><b>Gameplay:</b> I developed the core game mechanics for the Mushroom Wars clone, where warriors 
+              (referred to as "gonks") are generated from buildings. These warriors are used to upgrade buildings 
+              for faster warrior production.</p>
+
+              <p>The game features:</p>
+              <ul>
+              <li>Towers with a shooting radius, which can be neutral or owned by a team and upgraded</li>
+              <li>Victory conditions where the last team standing wins, with a visible bar showing each team's total warriors</li>
+              <li>The ability to send warriors to your own, neutral, or enemy buildings, using them to engage the building's 
+                current defenders. You can send a quarter, half, three-quarters, or all of your warriors to an attack.</li>
+              </ul>
+              <p>
+              Additionally, I implemented:
+              </p>
+              <ul>
+              <li>Sprite animations for upgrading buildings and animating gonk sprites</li>
+              <li>Rotating selection rings and arrows for aiming warriors at buildings</li>
+              </ul>
+            </li>
+            <li><p><b>Editor:</b> 
+              I created an editor for building levels, where users can:</p>
+              <ul>
+              <li>Drag and drop buildings and towers</li>
+              <li>Assign initial teams or set them as neutral</li>
+              <li>Set starting warriors and initial building levels</li>
+              </ul>
+              <p>
+              Once the level is designed, it can be saved and played from the menu. The number of teams added 
+              determines how many players are needed to play the level.
+              </p>
+            </li>
+            <li><b>Coop:</b>
+              I implemented full support for up to 4 players using either keyboard and mouse. The settings menu 
+              allows each player to choose between keyboard or mouse and rebind controls. These settings are 
+              saved and can be accessed mid-game, pausing the game.
+              For controller support, I mirrored the original Mushroom Wars controls, which required calculating 
+              all the navigational directions for moving between buildings.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> 
+            My first challenge was figuring out how to save multiple settings, which I initially tackled using raw binary data. 
+            Over time, I learned the advantages of using a more structured format like JSON. Binary formats should be reserved 
+            for later optimization in final game builds. This experience also taught me the importance of considering serialization 
+            early on, as changing it later proved to be quite painful.
+
+            Another challenge was managing the many player controls, which required more UX design than I had anticipated. While 
+            I eventually achieved the customization and ease of use I was aiming for, it took longer than expected.
+          </p>
+        </section>
+      </div>
+
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

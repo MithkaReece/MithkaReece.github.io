@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Monster-Maze</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <a class="arrow left-arrow" href="uno.html">
+        <span class="arrow-text">Uno</span>
+      </a>
+      <a class="arrow right-arrow" href="ballCollector.html">
+        <span class="arrow-text">Ball Collector</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">3D Monster Maze</h1>
+          <h3 class="date">Spring 2020</h3>
+          <p>I aimed to apply the mathematical concepts I learned during my A Level Mathematics studies to create 3D graphics, 
+            intentionally avoiding external resources to personally confront the challenges associated with rendering such 
+            graphics. Consequently, I gained valuable insights into the methodologies used in modern software for 3D rendering, 
+            which were further enriched through my third-year Graphics module.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/i8LZ-IbNeC4" frameborder="0" allowfullscreen ></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+    
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+    
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/MonsterMaze" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+            <div style="background-color: rgb(238, 40, 99)">P5</div>
+            <div style="background-color: rgb(8, 112, 194)">Graphics</div>
+            <div style="background-color: rgb(8, 194, 33)">Collision</div>
+            <div style="background-color: rgb(135, 8, 194)">Pausing</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>3D Graphics:</b> I had no prior experience with any graphics technology, however, before I conducted research 
+              and learned how 3D graphics are accomplished, I aimed to challenge and expand my mathematical knowledge. Utilizing 
+              only the mathematics I learned at A level, I successfully projected a 3D world onto a 2D plane.
+
+              During this process, I encountered several issues related to 3D graphics, such as culling objects that were behind 
+              the camera or obscured by other objects, as well as dealing with polygon edges outside the point of view (POV). These
+              challenges underscored the importance of splitting polygons into triangles for efficient culling detection.
+            </li>
+            <li><b>Collisions:</b> To make the maze navigation possible, I implemented collisions between the player and walls.
+               While I could have restricted these collisions to the x and y axes, this approach would only work for walls 
+               aligned with those axes. I aimed for a more generalized approach, so instead, I broke down my movement vector 
+               in terms of the normal vector of the colliding wall. This prevented movement in the direction of the wall's 
+               normal, allowing movement along objects without passing through them upon collision, regardless of their rotation.
+
+              Additionally, I wanted the ability to create very large mazes. Constantly checking collisions between all 
+              walls in such large mazes would be computationally expensive. To address this, I implemented a quad-tree
+               data structure to selectively check collisions only for objects that are close to each other.
+            </li>
+            <li><b>UI & Pausing:</b> 
+              I implemented an overlay containing the controls for new users. Pressing Tab pauses 
+              the game and provides options to restart, go fullscreen, or return to the main menu. The main menu features a 
+              leaderboard where players can view the times it took for previous players to finish the maze.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> My primary challenge revolved around 3D graphics, particularly the complex task of correctly projecting 3D objects 
+            onto a 2D plane. This challenge led me to develop my own matrix library, which allowed me to embed the projection 
+            process into matrix calculations.
+
+            Another issue I encountered, was when I projected a polygon with points behind the camera resulting in unrealistic edges. 
+            To overcome this, I devised an algorithm to split polygons into new polygons where all 
+            points fell within the camera's point of view (POV).
+            
+            Subsequently, through my graphics modules, I learned about all the processes involved in the 3D graphics pipeline. 
+            Pursuing this goal has provided me with a much deeper appreciation for the careful considerations involved in the entire pipeline.
+          </p>
+        </section>
+
+        <div class="game-container">
+          <h3 class="section-title">Embedded Game</h3>
+          <div class="button-container">
+            <button class="loadGameButton">Load/Reload Game</button>
+            <button class="unloadGameButton">Unload Game</button>
+          </div>
+          <img class="placeholder-image" src="../Assets/MonsterMaze1.png" width="1000" height=auto>
+          <iframe class="game" width="1000" height="0" hidden></iframe>
+        </div>
+
+        <script>
+          const gameFrame = document.querySelector(".game");
+          const placeholderImage = document.querySelector('.placeholder-image');
+
+          const loadGameButton = document.querySelector(".loadGameButton");
+          const unloadGameButton = document.querySelector(".unloadGameButton");
+
+          loadGameButton.addEventListener("click", function() {
+            gameFrame.src = "../Games/MonsterMaze/index.html";
+            gameFrame.hidden = false; // Show game
+            gameFrame.style.height = '700px'; // Give game height
+            placeholderImage.style.display = 'none'; // Hide preview image
+            placeholderImage.hidden = true; // Hide preview image
+
+          });
+
+          unloadGameButton.addEventListener("click", function() {
+            gameFrame.src = "about:blank";
+            gameFrame.hidden = true;
+            gameFrame.style.height = "0";
+            placeholderImage.style.display = 'block'; 
+            placeholderImage.hidden = false;
+          });
+        </script>
+
+
+      </div>
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

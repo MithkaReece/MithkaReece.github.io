@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Age-of-Empires</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <a class="arrow left-arrow" href="graphics.html">
+        <span class="arrow-text">Graphics Module</span>
+      </a>
+      <a class="arrow right-arrow" href="durjam.html">
+        <span class="arrow-text">DurJam</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Age Of Empires</h1>
+          <h3 class="date">Autumn 2020</h3>
+          <p>My goal was to recreate Age of Empires: The Age of Kings. 
+            This project was driven by a desire to explore UI design, 
+            mouse controls, resource management and the mechanics of creating structures and units.
+          </p>
+          <div class="video-container">
+            <iframe width="1902" height="1080" src="https://www.youtube.com/embed/LZzAaFwqZ-M" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+      
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+      
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/Age-Of-Empires" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(240, 220, 86); color:black">JS</div>
+            <div style="background-color: rgb(238, 40, 99)">P5</div>
+            <div style="background-color: rgb(53, 40, 238)">Tilebased</div>
+            <div style="background-color: rgb(201, 103, 11)">Local Multiplayer</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Tilemap:</b> My first attempt at creating a tilemap involved multiple layers for 
+              terrain tiles, building tiles and unit tiles. Players can interact with buildings or 
+              units on their team to choose actions such as movement, building, or training more units. 
+              I didn't get around to adding the attack actions, but this would involve a simple stats 
+              comparison and some randomness. The terrain tile a unit is on affects these stats, 
+              for example, archers have less range in forests. Terrain also affects how far a unit 
+              can move through it, reducing the number of steps to the next tile.
+            </li>
+            <li><b>UI:</b> The UI was custom-made using only the p5 library for drawing shapes and text. 
+              It allows for the selection of actions and tiles. I designed it to be playable both with 
+              just the keyboard and with a mouse for faster tile selection.
+            </li>
+            <li><b>Resource management:</b> You start with a set amount of food and gold, which can be spent 
+              to build buildings and train units. Mills and gold mines can be constructed on resource deposits 
+              and produce resources each turn based on the deposits they are built on.
+            </li>
+            <li><b>Local Multiplayer:</b> Every turn, the team is swapped to the next player. Players can only 
+              interact with buildings and units on their team. However, they can hold down the interaction button 
+              on an enemy unit to see the possible locations that the enemy unit could move to.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> It was initially challenging to create the tilemap and mouse interactions due to the isometric 
+            perspective on the tilemap. I developed a transformation to map 2D positions to the isometric 
+            position, which can also be used when mapping the mouse position to a tile.
+          </p>
+        </section>
+
+
+      <div class="game-container">
+        <h3 class="section-title">Embedded Game</h3>
+        <h2>Controls: <br>
+          Select = Mouse click or WASD (move square) and Space (select square) <br>
+          Zoom = Mouse Scroll <br>
+          Next Turn = Enter</h2>
+        <div class="button-container">
+          <button class="loadGameButton">Load/Reload Game</button>
+          <button class="unloadGameButton">Unload Game</button>
+        </div>
+        <img class="placeholder-image" src="../Assets/AOE.png" alt="Placeholder Image" width="1000" height=auto>
+        <iframe class="game" width="1000" height="0" hidden></iframe>
+      </div>
+        <script>
+          const gameFrame = document.querySelector(".game");
+          const placeholderImage = document.querySelector('.placeholder-image');
+
+          const loadGameButton = document.querySelector(".loadGameButton");
+          const unloadGameButton = document.querySelector(".unloadGameButton");
+
+          loadGameButton.addEventListener("click", function() {
+            gameFrame.src = "../Games/Age-Of-Empires/index.html";
+            gameFrame.hidden = false; // Show game
+            gameFrame.style.height = '700px'; // Give game height
+            placeholderImage.style.display = 'none'; // Hide preview image
+            placeholderImage.hidden = true; // Hide preview image
+
+          });
+
+          unloadGameButton.addEventListener("click", function() {
+            gameFrame.src = "about:blank";
+            gameFrame.hidden = true;
+            gameFrame.style.height = "0";
+            placeholderImage.style.display = 'block'; 
+            placeholderImage.hidden = false;
+          });
+        </script>
+        
+      </div>
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

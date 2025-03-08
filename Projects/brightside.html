@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Brightside</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+ 
+
+      <a class="arrow left-arrow" href="particleeditor.html">
+        <span class="arrow-text">Particle Editor</span>
+      </a>
+      <a class="arrow right-arrow" href="gonkquered.html">
+        <span class="arrow-text">Gonkquered</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Brightside</h1>
+          <h3 class="date">2024</h3>
+          <p>
+            For my second skills project, I created a game inspired by DarkSide. This was the first 3D game I worked on 
+            at the academy and we used Play3D for the project. The main objective was to become familiar with 3D game 
+            development while adding "juice" to the gameplay, including particle effects, post-effects and other enhancements 
+            like screen shake, abilities and interesting lighting.
+          </p>
+          <img class="card-image" src="../Assets/Brightside.gif">
+
+          <div class="tags">
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+            <div style="background-color: rgb(59, 7, 182)">Gameplay</div>
+            <div style="background-color: rgb(236, 233, 21); color: black">Juice</div>
+            <div style="background-color: rgb(53, 207, 182)">Solo</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Gameplay:</b> The gameplay is similar to DarkSide and Asteroids. You have asteroids that split into two 
+              until they are too small to split further. Players can pick up abilities that modify their shooting mechanics, 
+              such as increasing the number of bullets, adding shooting directions and affecting damage. There are also 
+              health pickups and when health is low, the screen pulses red, accompanied by a smoke effect.
+
+              As the player survives longer, the planet grows larger, more asteroids spawn and the asteroids move faster. 
+              Additionally, bomb towers and abilities spawn more frequently, making the game increasingly chaotic as time 
+              goes on. A small score counter is displayed at the top, but UI was not a priority for this project.
+            </li>
+            <li><b>Juice:</b> This was my first attempt at creating 3D particles. I developed several effects, including bullet 
+              trails, fire for ship thrusters, smoke for low-health engines and an explosion effect that combines a smoke ring 
+              with a flash from an animated sprite.
+
+              To enhance the game's juice, I added dynamic lighting from the ship, the planet and a distant star. I also 
+              included sound effects and screen shake for explosions and collisions, with the intensity based on the distance 
+              to the player. Additional effects included glowing abilities when certain power-ups were active and a bomb tower 
+              that, when shot down, falls and triggers a massive explosion, affecting all nearby asteroids and causing the 
+              screen to flash white.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> 
+            One of the biggest challenges was figuring out the curved physics of a small planet, which required a lot of 
+            debugging to get right. I also learned how particle effects can be created using simple sprites and movement. 
+            It was interesting to discover how different combinations of emitters can create a natural-looking effect, while 
+            others make it obvious that it's just a sprite moving around. For instance, I hadn't considered that an explosion 
+            effect could use multiple emitters, such as one for smoke and another for the explosion flash.
+
+            Additionally, I learned a lot from working with artists to create the assets for this game. It was important 
+            to be clear about exactly what my game needed, while also balancing the workload for the artists, who were 
+            working on assets for other projects. For example, the bomb tower was originally made for someone else, but 
+            I was able to reuse it with slight modifications, saving time compared to creating a new asset from scratch. 
+          </p>
+          </section>
+      </div>
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

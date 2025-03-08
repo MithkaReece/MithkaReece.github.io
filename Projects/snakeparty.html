@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">Snake Party</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+ 
+
+      <a class="arrow left-arrow" href="farming.html">
+        <span class="arrow-text">Farming Game</span>
+      </a>
+      <a class="arrow right-arrow" href="jetsetcrash.html">
+        <span class="arrow-text">JetSetCrash</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">Snake Party</h1>
+          <h3 class="date">2024</h3>
+          <p>
+            Snake Party originated from a previous skills project but evolved into a game developed for Sheffield Wednesday, 
+            designed to be played on the big screen during halftime by audience members. The entire academy team of 11 programmers 
+            and 5 technical artists contributed to the project, making it my first experience working in a large team and an existing, 
+            extensive codebase.
+          </p>
+          <iframe width="1120" height="630" src="https://www.youtube.com/embed/EqPuux4oIP8?start=0&amp;end=56" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <div class="tags">
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+            <div style="background-color: rgb(107, 60, 214)">UIEditor</div>
+            <div style="background-color: rgb(126, 238, 122); color: Black">InputSystem</div>
+            <div style="background-color: rgb(243, 188, 8); color: Black">Polish</div>
+            <div style="background-color: rgb(53, 207, 182)">Group</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>UI Editor:</b> Developed a UI editor that allows creating screen-space UI elements such as text, buttons, sliders and toggles in any scene. 
+              Users can assign a custom enum name to a button, which is then automatically added to a generated UI enum list after running the build script. 
+              UI elements are saved to JSON per scene, enabling easy reference and functionality assignment. The editor also supports dragging, resizing and 
+              grid snapping for precise alignment of elements.
+            </li>
+            <li><b>Input System:</b> Developed an action input system that allows defining actions triggered by keyboard or controller. 
+              It supports multiple player configurations, including keyboard-keyboard, keyboard-controller and controller-controller setups. 
+              Additionally, I added a setting that lets player one use both keyboard and controller, while player two uses a second controller.
+            </li>
+            <li><b>Polish:</b> Toward the end of the project, I supported final design tweaks, including gameplay balancing, improving object presentation 
+              and experimenting with post effects and UI. The final design featured a metal skin with a swapping crown to indicate role changes, 
+              supported by animated text transitions. I completed the animation system after it was handed over by Adi and used it to create a 
+              leaderboard screen displaying animated stats. Additionally, I implemented a team selection feature, ensuring the snake masks 
+              matched team colors by mapping different parts of the design to real-world football team colors.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> Working in a large team of 11 programmers and 5 technical artists provided valuable experience in using Perforce, 
+            handling code merges and collaborating in overlapping areas of development, especially toward the end of the project. 
+            Frequent code reviews and direct collaboration with colleagues helped refine features like my UI editor to meet team needs. 
+            During the final polishing phase, I also conducted a memory profile, identifying and cleaning up memory leaks across different 
+            parts of the codebase.
+          </p>
+        </section>
+      </div>
+
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

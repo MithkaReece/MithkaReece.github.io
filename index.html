@@ -22,7 +22,6 @@
  
   <ul class="navbar-links">
     <li><a class="active" href="">Home</a></li>
-    <li><a href="skills.html">Skills</a></li>
     <li><a href="cv.html">CV</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
@@ -35,57 +34,155 @@
   <div class="banner-line"></div>
 </section>
 <div class="Home-Page">
+  <h2>Experienced In</h2>
+  <div class="tags">
+  <div style="background-color: rgb(1, 87, 152)">C++</div>
+  <div style="background-color: rgb(255,223,87);color: rgb(17, 79, 128)">Python</div>
+  <div style="background-color: rgb(0, 0, 0)">Unreal</div>
+  <div style="background-color: rgb(143, 143, 143)">HLSL</div>
+  <div style="background-color: rgb(65, 21, 149)">C#</div>
+  <div style="background-color: rgb(84, 84, 84)">Unity</div>
+  <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
+  <div style="background-color: rgb(243,149,31)">SQL</div>
+  <div style="background-color: rgb(0,0,129)">Lua</div>
+  <div style="background-color: rgb(247,76,0)">Rust</div>
+  </div>
+
+
   <h2>Highlighted Projects</h2>
   <div class="flex-grid">
+
     <div class = "image-card">
-      <a class="image-link" href="Projects/farming.html">
-        <img class="card-image" src="Assets/Farming2.png"></a>
-      <div class="title-bar"><h2>Farming Game</h2></div>
+      <a class="image-link" href="Projects/snakeparty.html">
+        <img class="card-image" src="Assets/SnakePartyVideo.gif"></a>
+      <div class="title-bar"><h2>Snake Party</h2></div>
 
       <div class="tags">
-        <a href="https://github.com/MithkaReece/Farming-Bevy" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(247,76,0)">Rust</div>
-        <div style="background-color:  rgb(40, 40, 40); color: white">Bevy</div>
-        <div style="background-color: rgb(59, 7, 182)">Chunk Loading</div>
-        <div style="background-color: rgb(0, 78, 247)">Tilemap</div>
-        <div style="background-color: rgb(17, 156, 12)">AI</div>
+        <div style="background-color: rgb(1, 87, 152)">C++</div>
+        <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+        <div style="background-color: rgb(107, 60, 214)">UIEditor</div>
+        <div style="background-color: rgb(126, 238, 122); color: Black">InputSystem</div>
+        <div style="background-color: rgb(243, 188, 8); color: Black">Polish</div>
+        <div style="background-color: rgb(53, 207, 182)">Group</div>
       </div>
       <ul>
-        <li>Leverage Rust to enhance C++ skills</li>
-        <li>Utilize Bevy's advanced ECS framework</li>
-        <li>Implement Chunk Loading</li>
-        <li>Implement Custom AI behaviour tree (In Progress)</li>
-        <li>Implement Pathfinding (TODO)</li>
+        <li>Created UI Editor for HUD and Menus</li>
+        <li>Action Input System for Multiple players and controllers</li>
+        <li>UI Controller Support</li>
+        <li>Added Polish (Scoreboard, Selectable colours, Gameplay Tweaks, Optimisations)</li>
       </ul>
     </div>
 
     <div class = "image-card">
-      <a class="image-link" href="Projects/2.5D.html">
-        <img class="card-image" src="Assets/25D.png"></a>
-      </a>
-      <div class="title-bar"><h2>2.5D Jumping Game</h2></div>
+      <a class="image-link" href="Projects/jetsetcrash.html">
+        <img class="card-image" src="Assets/JetSetCrashParticles.gif"></a>
+      <div class="title-bar"><h2>JetSetCrash</h2></div>
 
       <div class="tags">
-        <a href="https://github.com/MithkaReece/2.5D" target="_blank">
+        <div style="background-color: rgb(1, 87, 152)">C++</div>
+        <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+        <div style="background-color: rgb(59, 7, 182)">Gameplay</div>
+        <div style="background-color: rgb(17, 156, 12)">AI</div>
+        <div style="background-color: rgb(126, 11, 36)">Particles</div>
+        <div style="background-color: rgb(53, 207, 182)">Group</div>
+      </div>
+      <ul>
+        <li>Developed gameplay over iterations</li>
+        <li>Had people come in to playtest and give feedback</li>
+        <li>Created alien AI (Who stole your rocket parts)</li>
+        <li>Made various particle effects</li>
+        <li>Optimised the 3D project (Instanced Rendering)</li>
+        <li>Showcased our game in The National Videogame Museum </li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link" href="Projects/particleeditor.html">
+        <img class="card-image" src="Assets/ParticleEditorExample.gif"></a>
+      <div class="title-bar"><h2>Particle Editor</h2></div>
+
+      <div class="tags">
+        <div style="background-color: rgb(1, 87, 152)">C++</div>
+        <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+        <div style="background-color: rgb(126, 11, 36)">Particles</div>
+        <div style="background-color: rgb(59, 7, 182)">Editor</div>
+        <div style="background-color: rgb(53, 207, 182)">Solo</div>
+      </div>
+      <ul>
+        <li>Using imgui, created an editor for particle parameters</li>
+        <li>Optimised by using many compute shaders</li>
+        <li>Serialized to load/save particles and create collections of emitters</li>
+        <li>Created compute shaders to depth sort the particles</li>
+        <li>Soft particles feature - using depth buffer, decrease alphas close to surfaces</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link" href="Projects/brightside.html">
+        <img class="card-image" src="Assets/Brightside.gif"></a>
+      <div class="title-bar"><h2>Brightside</h2></div>
+
+      <div class="tags">
+        <div style="background-color: rgb(1, 87, 152)">C++</div>
+        <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+        <div style="background-color: rgb(59, 7, 182)">Gameplay</div>
+        <div style="background-color: rgb(236, 233, 21); color: black">Juice</div>
+        <div style="background-color: rgb(53, 207, 182)">Solo</div>
+      </div>
+      <ul>
+        <li>Inspired by Darkside but created new game mechanics</li>
+        <li>Particles and post effects</li>
+        <li>Game loop/progression</li>
+        <li>Worked with artists for the 3D assets</li>
+        <li>3D orbital collision system</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link" href="Projects/gonkquered.html">
+        <img class="card-image" src="Assets/GonkGameplay.gif"></a>
+      <div class="title-bar"><h2>Gonkquered</h2></div>
+
+      <div class="tags">
+        <div style="background-color: rgb(1, 87, 152)">C++</div>
+        <div style="background-color:  rgb(192, 0, 0); color: white">PlayBuffer</div>
+        <div style="background-color: rgb(59, 7, 182)">Gameplay</div>
+        <div style="background-color: rgb(109, 206, 18)">Editor</div>
+        <div style="background-color: rgb(218, 53, 16)">Coop</div>
+        <div style="background-color: rgb(53, 207, 182)">Solo</div>
+      </div>
+      <ul>
+        <li>Ported gameplay from mushroom wars</li>
+        <li>Created a level editor</li>
+        <li>UI - Main menu, settings, level select and editor</li>
+        <li>Control settings that lets you rebind any control for any of the 4 players</li>
+      </ul>
+    </div>
+
+    <div class = "image-card">
+      <a class="image-link"  href="Projects/combat.html">
+        <img class="card-image"  src="Assets/Rogue-Like.png"></a>
+      <div class="title-bar"><h2>Combat System</h2></div>
+      <div class="tags">
+        <a href="https://github.com/MithkaReece/Rogue-Like" target="_blank">
           <img src="Assets/github-logo.png" class="github-tag">
         </a>
         <div style="background-color: rgb(65, 21, 149)">C#</div>
-        <div style="background-color:  rgb(84, 84, 84)">Unity</div>
-        <div style="background-color:  rgb(29, 13, 173)">Animations</div>
-        <div style="background-color:  rgb(173, 13, 13)">Custom Physics</div>
+        <div style="background-color: rgb(84, 84, 84)">Unity</div>
+        <div style="background-color: rgb(172, 18, 18)">Animations</div>
+        <div style="background-color: rgb(33, 197, 129)">Combat</div>
       </div>
 
       <ul>
-        <li>Implemented custom 2.5D jumping physics</li>
-        <li>Developed an animation state system using a code-based approach with events</li>
-        <li>Plan to implement custom 2.5D lighting (TODO)</li>
+        <li>My first substantial Unity project</li>
+        <li>Iterated on the animation system multiple times</li>
+        <li>Developed a Combat Event and State Machine system</li>
+        <li>Designed a stylized UI featuring health and poise rings</li>
       </ul>
     </div>
 
     <div class = "image-card">
-      <a class="image-link" href="Projects/asteroids2.html">
+      <a class="image-link" href="Projects/asteroids.html">
         <img class="card-image" src="Assets/AsteroidsCPP2.png"></a>
       <div class="title-bar"><h2>Asteroids Remake</h2></div>
 
@@ -108,29 +205,8 @@
     </div>
 
     <div class = "image-card">
-      <a class="image-link"  href="Projects/combat.html">
-        <img class="card-image"  src="Assets/Rogue-Like.png"></a>
-      <div class="title-bar"><h2>Combat Game</h2></div>
-      <div class="tags">
-        <a href="https://github.com/MithkaReece/Rogue-Like" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(65, 21, 149)">C#</div>
-        <div style="background-color: rgb(84, 84, 84)">Unity</div>
-        <div style="background-color: rgb(172, 18, 18)">Animations</div>
-        <div style="background-color: rgb(33, 197, 129)">Combat</div>
-      </div>
-
-      <ul>
-        <li>My first substantial Unity project</li>
-        <li>Iterated on the animation system multiple times</li>
-        <li>Developed a Combat Event and State Machine system</li>
-        <li>Designed a stylized UI featuring health and poise rings</li>
-      </ul>
-    </div>
-    <div class = "image-card">
       <a class="image-link"  href="Projects/uno.html">
-        <img class="card-image"  src="Assets/Uno1.png"></a>
+        <img class="card-image"  src="Assets/Uno.gif"></a>
         <div class="title-bar"><h2>Uno Multiplayer</h2></div>
       <div class="tags">
         <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
@@ -148,216 +224,29 @@
     </div>
 
     <div class = "image-card">
-      <a class="image-link"  href="Projects/monsterMaze.html">
-        <img class="card-image"  src="Assets/MonsterMaze1.png"></a>
-        <div class="title-bar"><h2>A Level Coursework</h2><h2>Monster Maze</h2><h3>(Playable)</h3></div>
+      <a class="image-link" href="Projects/farming.html">
+        <img class="card-image" src="Assets/Farming2.png"></a>
+      <div class="title-bar"><h2>Farming Game</h2></div>
+
       <div class="tags">
-        <a href="https://github.com/MithkaReece/MonsterMaze" target="_blank">
+        <a href="https://github.com/MithkaReece/Farming-Bevy" target="_blank">
           <img src="Assets/github-logo.png" class="github-tag">
         </a>
-        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-        <div style="background-color: rgb(238, 40, 99)">P5</div>
-        <div style="background-color: rgb(8, 112, 194)">Graphics</div>
-        <div style="background-color: rgb(8, 194, 33)">Collision</div>
-        <div style="background-color: rgb(135, 8, 194)">Pausing</div>
+        <div style="background-color: rgb(247,76,0)">Rust</div>
+        <div style="background-color:  rgb(40, 40, 40); color: white">Bevy</div>
+        <div style="background-color: rgb(59, 7, 182)">Chunk Loading</div>
+        <div style="background-color: rgb(0, 78, 247)">Tilemap</div>
+        <div style="background-color: rgb(17, 156, 12)">AI</div>
       </div>
-
       <ul>
-        <li>Created custom 3D graphics using mathematical concepts learned during A-levels</li>
-        <li>Optimized collision detection with a quad-tree data structure</li>
-        <li>Implemented maze generation</li>
-        <li>Designed a heads-up display (HUD) and a pause menu</li>
+        <li>Leverage Rust to enhance C++ skills</li>
+        <li>Utilize Bevy's advanced ECS framework</li>
+        <li>Implement Chunk Loading</li>
+        <li>Implement Custom AI behaviour tree (In Progress)</li>
+        <li>Next step is to mplement Pathfinding</li>
       </ul>
     </div>
 
-  </div>
-
-  <h2>Personal Projects</h2>
-
-  <div class="flex-grid">
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/ballCollector.html">
-      <img class="card-image"  src="Games/BallCollector/Preview.png"></a>
-      <div class="title-bar"><h2>Ball Collector Game</h2><h3>(Playable)</h3></div>
-
-      <div class="tags">
-          <a href="https://github.com/MithkaReece/Ball-Collector" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(65, 21, 149)">C#</div>
-        <div style="background-color: rgb(84, 84, 84)">Unity</div>
-        <div style="background-color: rgb(226, 6, 6)">Mobile</div>
-      </div>
-
-      <ul>
-        <li>Random generation of levels based on selected difficulty</li>
-        <li>Mobile scaling resolution with touch controls</li>
-        <li>Scoring based on type of ball caught in the moving bucket</li>
-      </ul>
-    </div>
-
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/graphics.html">
-      <img class="card-image"  src="Assets/Graphics.png"></a>
-      <div class="title-bar"><h2>Graphics Module</h2></div>
-
-      <div class="tags">
-        <div style="background-color: rgb(240, 220, 86); color:black">ThreeJS</div>
-        <div style="background-color: rgb(243, 14, 14)">WebGL</div>
-        <div style="background-color: rgb(21, 33, 150)">Models</div>
-        <div style="background-color: rgb(21, 150, 27)">Lighting</div>
-      </div>
-
-      <ul>
-        <li>Applied WebGL in my third-year Graphics module</li>
-        <li>Imported 3D models from Blender</li>
-        <li>Applied texture and normal maps to objects</li>
-        <li>Implemented directional, spot and hemispherical lighting</li>
-        <li>Generated a maze with two types of levels</li>
-      </ul>
-    </div>
-
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/aoe.html">
-        <img class="card-image"  src="Assets/AOE.png"></a>
-        <div class="title-bar"><h2>Age of Empires Remake</h2><h3>(Playable)</h3></div>
-      <div class="tags">
-        <a href="https://github.com/MithkaReece/Age-Of-Empires" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(240, 220, 86); color:black">JS</div>
-        <div style="background-color: rgb(238, 40, 99)">P5</div>
-        <div style="background-color: rgb(53, 40, 238)">Tilebased</div>
-        <div style="background-color: rgb(201, 103, 11)">Local Multiplayer</div>
-      </div>
-
-      <ul>
-        <li>Developed my first custom tilemap system, featuring an interactable layer</li>
-        <li>Highlighted available movement options, calculated based on the movement speed of various types of tiles</li>
-        <li>Implemented resource collection and spending mechanics</li>
-        <li>Created a turn-based local multiplayer experience</li>
-      </ul>
-    </div>
-
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/durjam.html">
-        <img class="card-image"  src="Assets/DurJam.png"></a>
-      <div class="title-bar"><h2>DurJam Submission</h2><h3>(Playable)</h3></div>
-      <div class="tags">
-        <a href="https://github.com/MithkaReece/Re-Sources" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-        <div style="background-color: rgb(238, 40, 99)">P5</div>
-        <div style="background-color: rgb(25, 180, 219)">Custom Gravity</div>
-        <div style="background-color: rgb(25, 219, 51)">Teamwork</div>
-      </div>
-
-      <ul>
-        <li>First group project showing importance of version control</li>
-        <li>First encounter of scope creep and priortising core features </li>
-        <li>Custom physics (gravity rotates as you walk round the square planet)</li>
-        <li>Resource collection from breaking tiles</li>
-        <li>Team communication including non-programmer members</li>
-      </ul>
-    </div>
-
-
-        
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/asteroids.html">
-        <img class="card-image"  src="Assets/Asteroids.png"></a>
-      <div class="title-bar"><h2>Asteroids JS Prototype</h2><h3>(Playable)</h3></div>
-      <div class="tags">
-        <a href="https://github.com/MithkaReece/asteroids" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-        <div style="background-color: rgb(238, 40, 99)">P5</div>
-        <div style="background-color: rgb(135, 8, 194)">OOP</div>
-        <div style="background-color: rgb(121, 153, 5)">Particle Effects</div>
-      </div>
-      <ul>
-        <li>Developed my first larger game project</li>
-        <li>Utilized object-oriented programming (OOP) for game object separation</li>
-        <li>Created a quick JavaScript prototype for the game</li>
-        <li>Implemented custom particle effects</li>
-      </ul>
-    </div>
-            
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/snake.html">
-        <img class="card-image"  src="Assets/Snake.png"></a>
-        <div class="title-bar"><h2>Snake Algorithm</h2><h3>(Playable)</h3></div>
-      <div class="tags">
-        <a href="https://github.com/MithkaReece/snake-algorithm" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(240, 220, 86); color:black">JavaScript</div>
-        <div style="background-color: rgb(238, 40, 99)">P5</div>
-        <div style="background-color: rgb(135, 8, 194)">Collsions</div>
-        <div style="background-color: rgb(8, 194, 163)">AI</div>
-      </div>
-      <ul>
-        <li>Implemented an AI algorithm to play Snake</li>
-        <li>Utilized a queue data structure for efficient snake mechanics</li>
-        <li>Developed a collision system</li>
-      </ul>
-    </div>
-  </div>
-
-
-  <h2>Courses</h2>
-  <div class="flex-grid">
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/cooking.html"> 
-        <img class="card-image"  src="Games/CookingGame/Preview.png"></a>
-      <div class="title-bar"><h2>Code Monkey's</h2><h2>Cooking Game Course</h2><h3>(Playable)</h3></div>
-
-      <div class="tags">
-           <a href="https://github.com/MithkaReece/Cooking-Game" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(65, 21, 149)">C#</div>
-        <div style="background-color: rgb(84, 84, 84)">Unity</div>
-        <div style="background-color: rgb(21, 33, 150)">UI</div>
-        <div style="background-color: rgb(172, 18, 18)">Special Effects</div>
-      </div>
-
-      <ul>
-        <li>Reinforced game development foundations</li>
-        <li>Implemented multiplatform support (Web, Phone, Controller)</li>
-        <li>Expanded the user interface (UI)</li>
-        <li>Incorporated additional sound and particle effects</li>
-        <li>Utilized scriptable objects for managing static data</li>
-      </ul>
-    </div>
-
-    <div class = "image-card">
-      <a class="image-link"  href="Projects/juniorProgrammer.html"> 
-        <img class="card-image"  src="Assets/JuniorProgrammer.png"></a>
-      <div class="title-bar"><h2>Unity's</h2><h2>Junior Programmer Pathway</h2><h3>(Playable)</h3></div>
-
-      <div class="tags">
-        <a href="https://github.com/MithkaReece/Unity-Create-with-Code" target="_blank">
-          <img src="Assets/github-logo.png" class="github-tag">
-        </a>
-        <div style="background-color: rgb(65, 21, 149)">C#</div>
-        <div style="background-color: rgb(84, 84, 84)">Unity</div>
-        <div style="background-color: rgb(21, 33, 150)">UI</div>
-        <div style="background-color: rgb(172, 18, 18)">Special Effects</div>
-      </div>
-
-      <ul>
-        <li>Reinforced game development foundations</li>
-        <li>Implemented multiplatform support (Web, Phone, Controller)</li>
-        <li>Expanded the user interface (UI)</li>
-        <li>Incorporated additional sound and particle effects</li>
-        <li>Utilized scriptable objects for managing static data</li>
-      </ul>
-    </div>
-    
-    
   </div>
 
 </div>

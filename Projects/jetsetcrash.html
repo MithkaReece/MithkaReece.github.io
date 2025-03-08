@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">JetSetCrash</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+ 
+
+      <a class="arrow left-arrow" href="snakeparty.html">
+        <span class="arrow-text">SnakeParty</span>
+      </a>
+      <a class="arrow right-arrow" href="particleeditor.html">
+        <span class="arrow-text">Particle Editor</span>
+      </a>
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">JetSetCrash</h1>
+          <h3 class="date">2024</h3>
+          <p>
+            JetSetCrash was my 3rd skills project and my first experience working in a team of 4 programmers 
+            and 3 technical artists. The goal was to create a 5-10 minute, two-player split-screen game to be 
+            showcased at the Sheffield Gaming Museum.
+          </p>
+          <img class="card-image" src="../Assets/JetSetCrashParticles.gif"
+          width="950" 
+      height="490">
+
+          <div class="tags">
+            <div style="background-color: rgb(1, 87, 152)">C++</div>
+            <div style="background-color:  rgb(214, 112, 16); color: white">Play3D</div>
+            <div style="background-color: rgb(59, 7, 182)">Gameplay</div>
+            <div style="background-color: rgb(17, 156, 12)">AI</div>
+            <div style="background-color: rgb(126, 11, 36)">Particles</div>
+            <div style="background-color: rgb(53, 207, 182)">Group</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Gameplay:</b> I was responsible for most of the player gameplay, with assistance from Ricky for the animation system. 
+              I developed the third-person camera, perspective and turning mechanics, ensuring players couldn't instantly rotate but 
+              instead had a realistic turning circle.
+
+              I implemented the booping feature, where players can slap both other players and aliens. This sends them flying and stuns 
+              them for a second upon landing, preventing movement. Additionally, I added the ability to pick up rocket parts, which 
+              slows you down, but allows you to throw them—speeding up movement but leaving the part open for others to steal. 
+              Players can also take the part directly from another player, but if they're booped, they'll drop the part and get 
+              stunned. This creates a balance between throwing, jumping to evade and the risk of being stunned.
+        
+              I also implemented air movement mechanics, where players move slower in the air but can perform a ground pound, 
+              making large jumps less punishing while enabling an aerial attack on enemies or other players. Lastly, I handled 
+              the collision resolution for objects on the spherical planet and set up all the necessary colliders for each object.
+            </li>
+            <li><p><b>AI:</b> I developed the alien AI, the native inhabitants of the planets. 
+              The aliens have several states that govern their behavior, including:</p>
+              <ul>
+              <li>Walking to a random nearby location</li>
+              <li>Chasing a rocket part, with a timer that determines how long they'll pursue it before getting bored</li>
+              <li>Joining a collective of other aliens who have picked up a rocket part. This collective is controlled by a 
+              separate AI that simulates a group of aliens moving together with the part, creating the appearance of 
+              many aliens carrying it like ants.</li>
+              </ul>
+              <p>
+              To add challenge and balance, the rocket part moves faster as more aliens pick it up, making it harder to retrieve 
+              the longer you wait. Additionally, when one player is at least one planet ahead, the alien AI adjusts by moving 
+              closer to the losing player and further from the winning player, keeping the competition neck-and-neck.
+              
+              I also introduced the booping mechanic, allowing players to boop aliens with their hand or perform a ground 
+              pound to make them drop any rocket parts they're carrying. When this happens, the aliens do a perfect flip 
+              and always land on their feet, like cats.
+              </p>
+            </li>
+            <li><p><b>Particles & Effects:</b> I created various particle effects to enhance the game's visual appeal. These included:</p>
+              <ul>
+              <li>Rocket flame thrust with smoke</li>
+              <li>Sonic boom effect when aliens are booped</li>
+              <li>Jump thrust effects</li>
+              <li>Smoke rings from ground slamming</li>
+              <li>Flares and floating leaves to add environmental atmosphere</li>
+              </ul> 
+              <p>
+              Additionally, I implemented post-effects that adjusted contrast and saturation based on the planet the player was on. 
+              These effects were applied only to the screen half associated with the player, ensuring a unique visual experience for each.
+              </p>
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p> 
+            Due to the large number of objects, we encountered a significant FPS issue, something previous projects didn't 
+            face due to their smaller scope and the power of modern computers. To optimize performance, we:
+            <ul>
+            <li>Loaded specific planets one at a time</li>
+            <li>Culled collision checks between planets</li>
+            <li>I personally implemented instanced mesh rendering to handle large numbers of duplicate meshes, such as rocks and grass</li>
+            </ul>
+          </p>
+        </section>
+      </div>
+
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>

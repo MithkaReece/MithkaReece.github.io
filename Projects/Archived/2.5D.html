@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="../project.css">
+      <link rel="stylesheet" type="text/css" href="../navbar.css">
+      <link rel="stylesheet" type="text/css" href="../footer.css">
+      <link rel="stylesheet" type="text/css" href="../tags.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a class="navbar-header" href="../">Reece Waite</a>
+          <div class="navbar-icons">
+            <a class="navbar-icon" href="mailto:reece.waite1@gmail.com">
+              <img src="../Assets/email-icon-navbar.png" class="email-icon"></a>
+            <a class="navbar-icon" href="https://github.com/MithkaReece" target="_blank">
+              <img src="../Assets/github-logo-navbar.png" class="github-icon"></a>
+              <a class="navbar-icon" href="https://www.linkedin.com/in/reece-waite" target="_blank">
+                <img src="../Assets/LinkedIn-Icon-Navbar.png" class="linkedin-icon"></a>
+          </div>
+        </div>
+       
+        <ul class="navbar-links">
+          <li><a class="active" href="">2.5D-Game</a></li>
+          <li><a href="../">Home</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <a class="arrow left-arrow" href="farming.html">
+        <span class="arrow-text">Farming Game</span>
+      </a>
+      <a class="arrow right-arrow" href="asteroids2.html">
+        <span class="arrow-text">Asteroids C++</span>
+      </a>
+
+
+      <div class="main">
+        <section class="project-section">
+          <h1 class="project-title">2.5D Game</h1>
+          <h3 class="date">Autumn 2023</h3>
+          <p>In this project I aimed to practice my Unity skills and to stretch myself
+             by creating more customised features such as 2.5D collisions. 
+            I improved my animations system skills by 
+            streamlining from Aseprite frames to programmatically controlling 
+            animation duration and transition conditions. Additionally, I
+            implemented custom physics to create a 2.5D world where 3D collisions 
+            occur within a top-down tilemap environment.
+          </p>
+          <div class="video-container">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/LTEFIBezEMY" frameborder="0" allowfullscreen class="project-video"></iframe>
+            <script>
+              // JavaScript to make the iframe responsive
+              function adjustIframeHeight() {
+                  var iframe = document.querySelector('.video-container iframe');
+                  var containerWidth = document.querySelector('.video-container').clientWidth;
+                  var aspectRatio = 16 / 9; // Change this to match your video's aspect ratio
+                  var newHeight = containerWidth / aspectRatio;
+                  iframe.style.height = newHeight + 'px';
+              }
+      
+                // Call the function when the window is resized
+                window.addEventListener('resize', adjustIframeHeight);
+      
+                // Call the function initially
+                adjustIframeHeight();
+            </script>
+          </div>
+
+          <div class="tags">
+            <a href="https://github.com/MithkaReece/2.5D" target="_blank">
+              <img src="../Assets/github-logo.png" class="github-tag">
+            </a>
+            <div style="background-color: rgb(65, 21, 149)">C#</div>
+            <div style="background-color:  rgb(84, 84, 84)">Unity</div>
+            <div style="background-color:  rgb(29, 13, 173)">Animations</div>
+            <div style="background-color:  rgb(173, 13, 13)">Custom Physics</div>
+          </div>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><b>Animation System:</b> Animations system that 
+              streamlines Aseprite sprite sheet to programmatically control animation states, 
+              animation duration and transition conditions.
+            </li>
+            <li><b>Custom Physics:</b> A jumping mechanic in a topdown game where the 
+              collisions need to be check against the 3D heights of wall tiles. These heights 
+              are precalculated for an entire tilemap by using stair tiles to indicate a 
+              change in level.
+            </li>
+          </ul>
+          <h2>Challenges, solutions and lessons learnt</h2>
+          <p>Initially, attempting to store a 3D position of the player and use this to calculate 
+            3D collisions, however this generated errors from adding too much complexity. This 
+            led to a rework in which I simplified the logic to only require knowledge of the
+            ground level and the player's position to determine how far the player needs to 
+            fall to reach the ground. Based on the calculated ground position, I can then 
+            recalculate the ground level based on the tile below the player.
+          </p>
+          <h2>Trello</h2>
+          <img style="width: 100%;" src="../Assets/25DTrello.png"  >
+        </section>
+      </div>
+
+
+
+      <footer class="bottom-banner">
+        <div class="links">
+          <a href="mailto:reece.waite1@gmail.com">Email</a>
+          <a href="https://github.com/MithkaReece">GitHub</a>
+          <a href="https://www.linkedin.com/in/reece-waite">LinkedIn</a>
+        </div>
+      </footer>
+    </body>
+  </html>
